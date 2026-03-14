@@ -485,13 +485,13 @@ Before moving to Phase 4, verify:
 
 ### Tasks
 
-- [ ] **4.1**: Expand Zustand store with per-section progress
+- [x] **4.1**: Expand Zustand store with per-section progress
   - Replace single `scrollProgress` with per-section values: `{ hero: 0, agents: 0, tools: 0, plan: 0, roadmap: 0, execution: 0, templates: 0, closing: 0 }`
   - Add `activeSection` field (string ID of the most visible section)
   - File modified: `src/hooks/useScrollStore.js`
   - Done: store holds progress values for all 8 sections
 
-- [ ] **4.2**: Create `useScrollProgress` hook
+- [x] **4.2**: Create `useScrollProgress` hook
   - Registers GSAP ScrollTrigger for each `<SectionContainer>` by its `id`
   - On scroll: updates the corresponding section's progress (0 to 1) in the Zustand store
   - Updates `activeSection` based on which section is most in view
@@ -499,7 +499,7 @@ Before moving to Phase 4, verify:
   - File created: `src/hooks/useScrollProgress.js`
   - Done: scrolling through the page updates store values correctly (verify via Zustand devtools or console log)
 
-- [ ] **4.3**: Define section-to-notebook state map
+- [x] **4.3**: Define section-to-notebook state map
   - Create a declarative configuration object mapping each section ID to a notebook pose
   - Pose properties: `position: [x, y, z]`, `rotation: [x, y, z]`, `openAmount: 0–1`
   - Example: `hero: { position: [0, 0, 0], rotation: [0, 0, 0], openAmount: 0 }` (closed, centered)
@@ -507,7 +507,7 @@ Before moving to Phase 4, verify:
   - File created: `src/content/notebookStates.js`
   - Done: config object exists with entries for all 8 sections
 
-- [ ] **4.4**: Create `useNotebookState` hook
+- [x] **4.4**: Create `useNotebookState` hook
   - Reads `activeSection` and per-section progress from the Zustand store
   - Interpolates between the current and next section's notebook pose using the progress value
   - Returns: `{ position, rotation, openAmount }` (interpolated values)
@@ -515,14 +515,14 @@ Before moving to Phase 4, verify:
   - File created: `src/hooks/useNotebookState.js`
   - Done: hook returns smoothly interpolated values as the user scrolls between sections
 
-- [ ] **4.5**: Update `SceneController` to use notebook state map
+- [x] **4.5**: Update `SceneController` to use notebook state map
   - Replace the simple rotation logic from Phase 3 with `useNotebookState`
   - Apply interpolated `position` and `rotation` to the notebook model via `useFrame`
   - Apply `openAmount` if the model supports it (morph target or bone rotation), otherwise just position/rotation for Tier 1
   - File modified: `src/components/three/SceneController.jsx`
   - Done: notebook transitions between distinct poses as the user scrolls through different sections
 
-- [ ] **4.6**: Add DOM text animations per section
+- [x] **4.6**: Add DOM text animations per section
   - Use GSAP ScrollTrigger to animate section content on entry
   - Animations: fade-in + slight slide-up for headings and text blocks
   - Apply via refs on `SectionHeading` and `CopyBlock` components
@@ -532,14 +532,14 @@ Before moving to Phase 4, verify:
   - Files modified: `src/components/sections/*.jsx` (add refs and call the hook)
   - Done: section content fades in as the user scrolls to each section
 
-- [ ] **4.7**: Test scroll reversal behavior
+- [x] **4.7**: Test scroll reversal behavior
   - Scroll down through all sections, then scroll back up
   - Verify: notebook transitions reverse correctly, no stuck states
   - Verify: DOM animations replay or stay visible (no disappearing content)
   - Fix any issues with ScrollTrigger `toggleActions` or animation reset logic
   - Done: scrolling up and down produces smooth, predictable transitions in both directions
 
-- [ ] **4.8**: Test mobile scroll behavior
+- [x] **4.8**: Test mobile scroll behavior
   - Open on mobile viewport (375px) with touch scrolling
   - Verify: all transitions work with touch scroll
   - Verify: no jank, no stuck states, no overscroll issues
@@ -550,12 +550,12 @@ Before moving to Phase 4, verify:
 
 Before moving to Phase 5, verify:
 
-- [ ] notebook transitions between 8 distinct poses based on active section
-- [ ] transitions are smooth during scrolling (no jumps or snapping)
-- [ ] DOM text animations fire on section entry
-- [ ] scroll reversal works correctly (both 3D and DOM animations)
-- [ ] mobile scroll is smooth
-- [ ] `prefers-reduced-motion` disables all animations
+- [x] notebook transitions between 8 distinct poses based on active section
+- [x] transitions are smooth during scrolling (no jumps or snapping)
+- [x] DOM text animations fire on section entry
+- [x] scroll reversal works correctly (both 3D and DOM animations)
+- [x] mobile scroll is smooth
+- [x] `prefers-reduced-motion` disables all animations
 
 ---
 

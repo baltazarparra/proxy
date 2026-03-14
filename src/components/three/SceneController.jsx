@@ -1,11 +1,12 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { MathUtils } from 'three'
-import useScrollStore from '../../hooks/useScrollStore'
+import { getTargetPose } from '../../hooks/useNotebookState'
 import NotebookModel from './NotebookModel'
 
 /**
- * Reads scroll progress from Zustand and applies smooth rotation to the notebook.
+ * Reads per-section scroll state via getTargetPose() and applies smoothly
+ * interpolated position + rotation to the notebook group each frame.
  * @param {{ prefersReducedMotion?: boolean }} props
  */
 export default function SceneController({ prefersReducedMotion = false }) {
@@ -20,12 +21,14 @@ export default function SceneController({ prefersReducedMotion = false }) {
       return
     }
 
-    const progress = useScrollStore.getState().scrollProgress
-    const targetY = progress * Math.PI * 0.5
-    const targetX = progress * -Math.PI * 0.12
-
-    groupRef.current.rotation.y = MathUtils.lerp(groupRef.current.rotation.y, targetY, 0.1)
-    groupRef.current.rotation.x = MathUtils.lerp(groupRef.current.rotation.x, targetX, 0.1)
+    const target = getTargetPose()
+    const g = groupRef.current
+    g.position.x = MathUtils.lerp(g.position.x, target.position[0], 0.08)
+    g.position.y = MathUtils.lerp(g.position.y, target.position[1], 0.08)
+    g.position.z = MathUtils.lerp(g.position.z, target.position[2], 0.08)
+    g.rotation.x = MathUtils.lerp(g.rotation.x, target.rotation[0], 0.08)
+    g.rotation.y = MathUtils.lerp(g.rotation.y, target.rotation[1], 0.08)
+    g.rotation.z = MathUtils.lerp(g.rotation.z, target.rotation[2], 0.08)
   })
 
   return <NotebookModel ref={groupRef} />

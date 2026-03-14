@@ -1,15 +1,19 @@
+import { useRef } from 'react'
 import { useLanguage } from '../../hooks/useLanguage'
+import useSectionReveal from '../../hooks/useSectionReveal'
 import CopyBlock from '../ui/CopyBlock'
 
 export default function HeroSection() {
   const { t } = useLanguage()
+  const revealRef = useRef(null)
+  useSectionReveal(revealRef)
 
   return (
     <section
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center"
     >
-      <div className="mx-auto max-w-3xl">
+      <div ref={revealRef} className="mx-auto max-w-3xl">
         <h1 className="text-foreground text-4xl font-bold tracking-tight md:text-6xl">
           {t.hero.title}
         </h1>

@@ -2,19 +2,31 @@
  * Scroll state bridge: GSAP (DOM) -> Zustand -> R3F (WebGL).
  *
  * Architecture:
- * - GSAP ScrollTrigger reads DOM scroll position and calls setScrollProgress()
- * - R3F components read via useScrollStore.getState().scrollProgress inside useFrame()
+ * - GSAP ScrollTrigger reads DOM scroll position and calls setSectionProgress()
+ * - R3F components read via useScrollStore.getState() inside useFrame()
  * - NEVER use useScrollStore() hook inside Canvas — it triggers React re-renders
  * - NEVER let R3F read scroll position from the DOM directly
  * - NEVER let GSAP animate Three.js objects directly
- *
- * Phase 4 will expand this store with per-section progress values and activeSection.
  */
 import { create } from 'zustand'
 
 const useScrollStore = create((set) => ({
-  scrollProgress: 0,
-  setScrollProgress: (progress) => set({ scrollProgress: progress }),
+  sectionProgress: {
+    hero: 0,
+    agents: 0,
+    tools: 0,
+    plan: 0,
+    roadmap: 0,
+    execution: 0,
+    templates: 0,
+    closing: 0,
+  },
+  activeSection: 'hero',
+  setSectionProgress: (id, progress) =>
+    set((state) => ({
+      sectionProgress: { ...state.sectionProgress, [id]: progress },
+    })),
+  setActiveSection: (id) => set({ activeSection: id }),
 }))
 
 export default useScrollStore

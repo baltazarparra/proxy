@@ -1,7 +1,7 @@
 export default {
   hero: {
-    title: 'Proxy',
-    subtitle: 'A practical guide to agentic development.',
+    title: 'Practical guide ',
+    subtitle: 'to agentic development.',
     body: 'Code agents are changing how software is built. But without a clear flow, speed becomes chaos. Proxy walks you through from zero — from choosing your tool to shipping — with a simple method that works with any agent.',
   },
 

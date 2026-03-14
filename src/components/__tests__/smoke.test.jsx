@@ -6,6 +6,14 @@ vi.mock('../three/NotebookScene', () => ({
   default: () => null,
 }))
 
+vi.mock('../../hooks/useScrollProgress', () => ({
+  default: () => {},
+}))
+
+vi.mock('../../hooks/useSectionReveal', () => ({
+  default: () => {},
+}))
+
 describe('smoke tests', () => {
   it('App renders without crashing', () => {
     render(<App />)

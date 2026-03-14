@@ -103,16 +103,18 @@
 
 > Report: `reports/phase-3-3d-notebook-foundation.md`
 
-### Phase 4 — Scroll Orchestration (8 tasks)
+### Phase 4 — Scroll Orchestration (8 tasks) ✓
 
-- [ ] 4.1: Expand Zustand store with per-section progress
-- [ ] 4.2: Create `useScrollProgress` hook
-- [ ] 4.3: Define section-to-notebook state map
-- [ ] 4.4: Create `useNotebookState` hook
-- [ ] 4.5: Update `SceneController` to use notebook state map
-- [ ] 4.6: Add DOM text animations per section
-- [ ] 4.7: Test scroll reversal behavior
-- [ ] 4.8: Test mobile scroll behavior
+- [x] 4.1: Expand Zustand store with per-section progress
+- [x] 4.2: Create `useScrollProgress` hook
+- [x] 4.3: Define section-to-notebook state map
+- [x] 4.4: Create `useNotebookState` hook
+- [x] 4.5: Update `SceneController` to use notebook state map
+- [x] 4.6: Add DOM text animations per section
+- [x] 4.7: Test scroll reversal behavior
+- [x] 4.8: Test mobile scroll behavior
+
+> Report: `reports/phase-4-scroll-orchestration.md`
 
 ### Phase 5 — Templates and Final Content (5 tasks)
 
@@ -156,6 +158,6 @@
 
 ## Readiness Verdict
 
-**Verdict:** Ready — Phase 3 complete, Phase 4 next
+**Verdict:** Ready — Phase 4 complete, Phase 5 next
 
-**Justification:** All pre-requisites are resolved. Phase 1 (12/12), Phase 2 (14/15, deploy pending), Quality Gate (12/12), and Phase 3 (12/12) are complete. The 3D notebook scene renders behind DOM content with scroll-driven rotation via the GSAP → Zustand → R3F pattern. Error boundary, reduced motion support, and mobile simplification are in place. Phase 4 (Scroll Orchestration) can begin immediately.
+**Justification:** All pre-requisites are resolved. Phase 1 (12/12), Phase 2 (14/15, deploy pending), Quality Gate (12/12), Phase 3 (12/12), and Phase 4 (8/8) are complete. The notebook transitions between 8 distinct poses as the user scrolls through sections via per-section GSAP ScrollTrigger → Zustand → R3F interpolation. DOM text animations reveal content on scroll entry. Scroll reversal, mobile touch, and reduced-motion compliance are verified. Phase 5 (Templates and Final Content) can begin immediately.

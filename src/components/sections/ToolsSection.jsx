@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import { useLanguage } from '../../hooks/useLanguage'
+import useSectionReveal from '../../hooks/useSectionReveal'
 import SectionContainer from '../layout/SectionContainer'
 import SectionHeading from '../ui/SectionHeading'
 import CopyBlock from '../ui/CopyBlock'
@@ -23,37 +25,41 @@ function ToolCard({ tool, isCli }) {
 
 export default function ToolsSection() {
   const { t } = useLanguage()
+  const revealRef = useRef(null)
+  useSectionReveal(revealRef)
 
   return (
     <SectionContainer id="tools">
-      <SectionHeading>{t.tools.title}</SectionHeading>
-      <CopyBlock>
-        <p>{t.tools.body}</p>
-      </CopyBlock>
+      <div ref={revealRef}>
+        <SectionHeading>{t.tools.title}</SectionHeading>
+        <CopyBlock>
+          <p>{t.tools.body}</p>
+        </CopyBlock>
 
-      <div className="mt-12 space-y-10">
-        <div>
-          <h3 className="text-foreground mb-4 text-lg font-semibold">IDE</h3>
-          <div className="grid gap-4 md:grid-cols-2">
-            {t.tools.ide.map((tool) => (
-              <ToolCard key={tool.name} tool={tool} isCli={false} />
-            ))}
+        <div className="mt-12 space-y-10">
+          <div>
+            <h3 className="text-foreground mb-4 text-lg font-semibold">IDE</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              {t.tools.ide.map((tool) => (
+                <ToolCard key={tool.name} tool={tool} isCli={false} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-foreground mb-4 text-lg font-semibold">CLI</h3>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {t.tools.cli.map((tool) => (
+                <ToolCard key={tool.name} tool={tool} isCli={true} />
+              ))}
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-foreground mb-4 text-lg font-semibold">CLI</h3>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {t.tools.cli.map((tool) => (
-              <ToolCard key={tool.name} tool={tool} isCli={true} />
-            ))}
-          </div>
-        </div>
+        <p className="text-muted mt-8 text-sm">
+          {t.tools.lastUpdated} — {t.tools.note}
+        </p>
       </div>
-
-      <p className="text-muted mt-8 text-sm">
-        {t.tools.lastUpdated} — {t.tools.note}
-      </p>
     </SectionContainer>
   )
 }
