@@ -86,20 +86,22 @@
 
 > Report: `reports/phase-2-static-landing-structure.md`
 
-### Phase 3 — 3D Notebook Foundation (12 tasks)
+### Phase 3 — 3D Notebook Foundation (12 tasks) ✓
 
-- [ ] 3.1: Install 3D and animation dependencies
-- [ ] 3.2: Spike — R3F + ScrollTrigger integration proof-of-concept
-- [ ] 3.3: Spike — validate mobile performance
-- [ ] 3.4: Document integration pattern
-- [ ] 3.5: Create `WebGLErrorBoundary` component
-- [ ] 3.6: Create `NotebookScene` component
-- [ ] 3.7: Create `SceneLights` component
-- [ ] 3.8: Create notebook model (procedural geometry)
-- [ ] 3.9: Create `SceneController` component
-- [ ] 3.10: Create `useReducedComplexity` hook
-- [ ] 3.11: Apply reduced complexity to scene
-- [ ] 3.12: Integrate notebook scene into the page
+- [x] 3.1: Install 3D and animation dependencies
+- [x] 3.2: Spike — R3F + ScrollTrigger integration proof-of-concept
+- [x] 3.3: Spike — validate mobile performance
+- [x] 3.4: Document integration pattern
+- [x] 3.5: Create `WebGLErrorBoundary` component
+- [x] 3.6: Create `NotebookScene` component
+- [x] 3.7: Create `SceneLights` component
+- [x] 3.8: Create notebook model (procedural geometry)
+- [x] 3.9: Create `SceneController` component
+- [x] 3.10: Create `useReducedComplexity` hook
+- [x] 3.11: Apply reduced complexity to scene
+- [x] 3.12: Integrate notebook scene into the page
+
+> Report: `reports/phase-3-3d-notebook-foundation.md`
 
 ### Phase 4 — Scroll Orchestration (8 tasks)
 
@@ -154,6 +156,6 @@
 
 ## Readiness Verdict
 
-**Verdict:** Ready — Phase 2 complete, Phase 3 next
+**Verdict:** Ready — Phase 3 complete, Phase 4 next
 
-**Justification:** All pre-requisites are resolved. Phase 1 (Scaffold and Design System, 12/12 tasks) and Phase 2 (Static Landing Structure, 14/15 tasks) are fully implemented. The page renders all 8 sections with real bilingual copy, a working language toggle, responsive layout, and semantic HTML. Task 2.15 (deploy) is pending a push to `main`. Phase 3 (3D Notebook Foundation) can begin immediately.
+**Justification:** All pre-requisites are resolved. Phase 1 (12/12), Phase 2 (14/15, deploy pending), Quality Gate (12/12), and Phase 3 (12/12) are complete. The 3D notebook scene renders behind DOM content with scroll-driven rotation via the GSAP → Zustand → R3F pattern. Error boundary, reduced motion support, and mobile simplification are in place. Phase 4 (Scroll Orchestration) can begin immediately.

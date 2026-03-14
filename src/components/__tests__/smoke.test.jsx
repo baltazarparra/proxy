@@ -1,13 +1,15 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import App from '../../App'
+
+vi.mock('../three/NotebookScene', () => ({
+  default: () => null,
+}))
 
 describe('smoke tests', () => {
   it('App renders without crashing', () => {
     render(<App />)
-    expect(
-      screen.getByText('Um guia prático para desenvolvimento com agentes de código.'),
-    ).toBeInTheDocument()
+    expect(screen.getByText('Guia prático')).toBeInTheDocument()
   })
 
   it('renders all 8 section IDs', () => {

@@ -10,6 +10,9 @@ export default function HeroSection() {
       className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center"
     >
       <div className="mx-auto max-w-3xl">
+        <h1 className="text-foreground text-4xl font-bold tracking-tight md:text-6xl">
+          {t.hero.title}
+        </h1>
         <p className="text-muted mt-4 text-xl md:text-2xl">{t.hero.subtitle}</p>
         <CopyBlock className="mx-auto mt-8 max-w-2xl">
           <p>{t.hero.body}</p>

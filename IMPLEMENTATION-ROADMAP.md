@@ -375,12 +375,12 @@ Before moving to Phase 3, verify:
 
 ### Tasks
 
-- [ ] **3.1**: Install 3D and animation dependencies
+- [x] **3.1**: Install 3D and animation dependencies
   - Install: `three`, `@react-three/fiber`, `@react-three/drei`, `gsap`, `zustand`
   - Files modified: `package.json`
   - Done: all packages install without errors, `npm run dev` still works
 
-- [ ] **3.2**: Spike — R3F + ScrollTrigger integration proof-of-concept
+- [x] **3.2**: Spike — R3F + ScrollTrigger integration proof-of-concept
   - Create a temporary spike component (can live in `src/components/three/Spike.jsx`)
   - Set up: one `<Canvas>` positioned `fixed` with `z-index: 0` behind DOM content
   - Add a simple 3D box inside the Canvas
@@ -391,26 +391,26 @@ Before moving to Phase 3, verify:
   - Files created: `src/components/three/Spike.jsx`, `src/hooks/useScrollStore.js`
   - Done: box rotates with scroll, no jank, DOM content remains interactive on top
 
-- [ ] **3.3**: Spike — validate mobile performance
+- [x] **3.3**: Spike — validate mobile performance
   - Open Chrome DevTools, enable CPU 4x throttle and mobile viewport
   - Scroll through the page with the spike active
   - Measure frame rate (Performance tab)
   - Target: stable 30fps+ with the spike running
   - Done: spike runs at 30fps+ under throttled conditions, OR issues are documented and addressed
 
-- [ ] **3.4**: Document integration pattern
+- [x] **3.4**: Document integration pattern
   - Based on the spike, document the final integration pattern in a code comment at the top of `useScrollStore.js`
   - Pattern: which system owns what (GSAP = DOM scroll, Zustand = bridge, R3F = 3D render)
   - Done: pattern is documented and the spike is verified working
 
-- [ ] **3.5**: Create `WebGLErrorBoundary` component
+- [x] **3.5**: Create `WebGLErrorBoundary` component
   - Class component that catches errors from Canvas/WebGL children
   - On error: renders a fallback (CSS-based notebook silhouette or nothing)
   - Logs error to console for debugging
   - File created: `src/components/three/WebGLErrorBoundary.jsx`
   - Done: wrapping a component that throws inside Canvas shows the fallback UI
 
-- [ ] **3.6**: Create `NotebookScene` component
+- [x] **3.6**: Create `NotebookScene` component
   - R3F `<Canvas>` wrapper with proper positioning (`fixed`, full viewport, behind DOM)
   - Wrapped in `<Suspense>` with a branded loading indicator
   - Wrapped in `<WebGLErrorBoundary>`
@@ -418,13 +418,13 @@ Before moving to Phase 3, verify:
   - File created: `src/components/three/NotebookScene.jsx`
   - Done: Canvas renders behind DOM content, loading state shows briefly, error boundary catches test errors
 
-- [ ] **3.7**: Create `SceneLights` component
+- [x] **3.7**: Create `SceneLights` component
   - Minimal lighting setup: one ambient light + one directional light
   - Soft, non-dramatic lighting matching the editorial tone
   - File created: `src/components/three/SceneLights.jsx`
   - Done: lights illuminate a test object in the scene without harsh shadows
 
-- [ ] **3.8**: Load or create notebook model
+- [x] **3.8**: Load or create notebook model
   - If using a `.glb` model: place it in `public/models/notebook.glb`, load with `useGLTF` from Drei
   - If using procedural geometry: create a notebook shape (box body + plane pages) with basic materials
   - Create `NotebookModel` component that renders the notebook
@@ -432,7 +432,7 @@ Before moving to Phase 3, verify:
   - File added: `public/models/notebook.glb` (if using a model file)
   - Done: notebook appears in the scene with correct proportions
 
-- [ ] **3.9**: Create `SceneController` component
+- [x] **3.9**: Create `SceneController` component
   - Lives inside `<Canvas>`
   - Reads `scrollProgress` from Zustand store (set up in spike)
   - Uses `useFrame` to interpolate notebook position, rotation based on scroll progress
@@ -440,20 +440,20 @@ Before moving to Phase 3, verify:
   - File created: `src/components/three/SceneController.jsx`
   - Done: notebook rotates as the user scrolls through the page
 
-- [ ] **3.10**: Create `useReducedComplexity` hook
+- [x] **3.10**: Create `useReducedComplexity` hook
   - Detects: mobile viewport (`window.innerWidth < 768`), `prefers-reduced-motion` media query
   - Returns: `{ isMobile, prefersReducedMotion, shouldSimplify }`
   - `shouldSimplify` is true if either condition is met
   - File created: `src/hooks/useReducedComplexity.js`
   - Done: hook returns correct values on mobile viewport and when `prefers-reduced-motion` is set
 
-- [ ] **3.11**: Apply reduced complexity to scene
+- [x] **3.11**: Apply reduced complexity to scene
   - In `NotebookScene`: if `shouldSimplify`, reduce scene quality (lower pixel ratio, fewer lights)
   - In `SceneController`: if `prefersReducedMotion`, show notebook in a static pose (no scroll animation)
   - Files modified: `src/components/three/NotebookScene.jsx`, `src/components/three/SceneController.jsx`
   - Done: enabling `prefers-reduced-motion` in DevTools shows a static notebook; mobile viewport shows simplified scene
 
-- [ ] **3.12**: Integrate notebook scene into the page
+- [x] **3.12**: Integrate notebook scene into the page
   - Remove spike component from `App.jsx`
   - Add `NotebookScene` to `PageShell` (rendered before/behind DOM sections)
   - Verify notebook is visible behind scrolling content
@@ -465,13 +465,13 @@ Before moving to Phase 3, verify:
 
 Before moving to Phase 4, verify:
 
-- [ ] notebook renders behind DOM content
-- [ ] notebook responds to scroll (basic rotation)
-- [ ] loading state appears while model loads
-- [ ] error boundary works (test by temporarily breaking WebGL)
-- [ ] `prefers-reduced-motion` shows static notebook
-- [ ] mobile viewport shows simplified scene
-- [ ] no performance regression on page scroll
+- [x] notebook renders behind DOM content
+- [x] notebook responds to scroll (basic rotation)
+- [x] loading state appears while model loads
+- [x] error boundary works (test by temporarily breaking WebGL)
+- [x] `prefers-reduced-motion` shows static notebook
+- [x] mobile viewport shows simplified scene
+- [x] no performance regression on page scroll
 
 ---
 
