@@ -336,12 +336,32 @@ Before moving to Phase 3, verify:
   - Added lint, format:check, typecheck, and test steps to `.github/workflows/deploy.yml` before the build step
   - Done: deploy is blocked if any quality check fails
 
+- [x] **QG.10**: Update AGENTS.md with quality gate documentation
+  - Added quality scripts to "Setup commands" section
+  - Added tooling mention to "Code style" section
+  - Updated "Validation after changes" to include `npm run check` as mandatory step
+  - Done: AGENTS.md reflects quality gate tools and workflows
+
+- [x] **QG.11**: Create Cursor rule for agent enforcement
+  - Created `.cursor/rules/quality-gate.mdc` with `alwaysApply: true`
+  - Instructs agent to run `lint:fix` + `format` after edits, `npm run check` before declaring completude
+  - Done: rule exists and is loaded automatically in every session
+
+- [x] **QG.12**: Install Husky + lint-staged for local commit enforcement
+  - Installed `husky` and `lint-staged` as devDependencies
+  - Pre-commit hook runs `npx lint-staged`: `eslint --fix` + `prettier --write` on staged `.js`/`.jsx`, `prettier --write` on `.css`/`.json`/`.md`
+  - Commit is blocked if ESLint finds unfixable errors
+  - Done: pre-commit hook is active
+
 ### Quality gate checkpoint
 
 - [x] `npm run check` passes (lint, format, typecheck, tests)
 - [x] `npm run build` succeeds
 - [x] CI workflow includes quality gate steps before deploy
 - [x] no new runtime dependencies added (all devDependencies)
+- [x] Cursor rule enforces checks during agent sessions
+- [x] Husky pre-commit hook enforces lint + format on staged files
+- [x] AGENTS.md documents quality gate tools and validation workflow
 
 ---
 
