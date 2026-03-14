@@ -569,45 +569,50 @@ Before moving to Phase 5, verify:
 
 ### Tasks
 
-- [ ] **5.1**: Create or link template files
+- [x] **5.1**: Create or link template files
   - Decide which templates to include: stack decision, PLAN, PRD, rules, skills
   - Either create template files in the repo (e.g. `templates/PLAN-TEMPLATE.md`) or link to an external repo
   - Done: template assets exist and are accessible via URL
+  - **Result:** Created 5 templates in `templates/`: PLAN-TEMPLATE.md, ROADMAP-TEMPLATE.md, PRD-TEMPLATE.md, RULES-TEMPLATE.md, SKILLS-TEMPLATE.md
 
-- [ ] **5.2**: Update CTA links
+- [x] **5.2**: Update CTA links
   - Update `TemplatesSection` CTA buttons to point to real template URLs
   - Update `ClosingSection` CTA to point to the GitHub repository
   - Files modified: `src/content/pt.js`, `src/content/en.js`, or section components
   - Done: all CTA buttons link to real, accessible URLs
+  - **Result:** Added `url` field to template items in `pt.js` and `en.js`; `TemplatesSection` uses `item.url`; `ClosingSection` links to `https://github.com/baltazarparra/proxy`
 
-- [ ] **5.3**: Final copy review — PT-BR
+- [x] **5.3**: Final copy review — PT-BR
   - Read through all 8 sections in PT-BR in the deployed page
   - Check: tone matches creative direction (concise, calm, intelligent, practical)
   - Check: no placeholder text remains
   - Check: no typos or grammatical issues
   - Update `src/content/pt.js` as needed
   - Done: PT-BR copy is publication-ready
+  - **Result:** Copy reviewed — no changes needed. Tone, grammar, terminology consistent throughout
 
-- [ ] **5.4**: Final copy review — EN
+- [x] **5.4**: Final copy review — EN
   - Read through all 8 sections in EN in the deployed page
   - Same checks as 5.3
   - Update `src/content/en.js` as needed
   - Done: EN copy is publication-ready
+  - **Result:** One fix: removed trailing space in hero title (`'Practical guide '` → `'Practical guide'`). All other copy clean
 
-- [ ] **5.5**: Adjust layout for final copy
+- [x] **5.5**: Adjust layout for final copy
   - If final copy changed text lengths significantly, check for layout issues
   - Fix any spacing, overflow, or alignment problems
   - Files modified: section components or `SectionContainer` as needed
   - Done: all sections render cleanly with final copy at all breakpoints
+  - **Result:** No layout changes needed. Grid layout (1/2/3 cols) handles template cards. `npm run check` and `npm run build` pass
 
 ### Phase 5 checkpoint
 
 Before moving to Phase 6, verify:
 
-- [ ] all CTA links work and point to real URLs
-- [ ] copy is final in both languages
-- [ ] no placeholder content remains
-- [ ] layout is clean with final copy
+- [x] all CTA links work and point to real URLs
+- [x] copy is final in both languages
+- [x] no placeholder content remains
+- [x] layout is clean with final copy
 
 ---
 

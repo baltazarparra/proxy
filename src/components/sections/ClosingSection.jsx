@@ -20,7 +20,7 @@ export default function ClosingSection() {
         </CopyBlock>
 
         <div className="mt-10">
-          <Button href="https://github.com/USERNAME/proxy">{t.closing.cta}</Button>
+          <Button href="https://github.com/baltazarparra/proxy">{t.closing.cta}</Button>
         </div>
       </div>
     </SectionContainer>

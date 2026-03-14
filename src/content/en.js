@@ -1,6 +1,6 @@
 export default {
   hero: {
-    title: 'Practical guide ',
+    title: 'Practical guide',
     subtitle: 'to agentic development.',
     body: 'Code agents are changing how software is built. But without a clear flow, speed becomes chaos. Proxy walks you through from zero — from choosing your tool to shipping — with a simple method that works with any agent.',
   },
@@ -126,11 +126,31 @@ export default {
     title: 'Start with structure, not from scratch',
     body: "We've gathered ready-made templates for each stage of the flow. Use them as a starting point: adapt, modify, make them yours. The goal is not to follow a rigid model — it's to have clarity from the very first step.",
     items: [
-      { name: 'PLAN', description: 'Project planning template' },
-      { name: 'ROADMAP', description: 'Implementation roadmap template' },
-      { name: 'PRD', description: 'Product requirements template' },
-      { name: 'Rules', description: 'Template for agent quality and safety rules' },
-      { name: 'Skills', description: 'Template for reusable agent skills' },
+      {
+        name: 'PLAN',
+        description: 'Project planning template',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/PLAN-TEMPLATE.md',
+      },
+      {
+        name: 'ROADMAP',
+        description: 'Implementation roadmap template',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/ROADMAP-TEMPLATE.md',
+      },
+      {
+        name: 'PRD',
+        description: 'Product requirements template',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/PRD-TEMPLATE.md',
+      },
+      {
+        name: 'Rules',
+        description: 'Template for agent quality and safety rules',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/RULES-TEMPLATE.md',
+      },
+      {
+        name: 'Skills',
+        description: 'Template for reusable agent skills',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/SKILLS-TEMPLATE.md',
+      },
     ],
   },
 

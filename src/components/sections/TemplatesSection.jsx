@@ -25,7 +25,7 @@ export default function TemplatesSection() {
               <p className="text-foreground text-lg font-semibold">{item.name}</p>
               <p className="text-muted mt-2 flex-1 text-sm">{item.description}</p>
               <div className="mt-4">
-                <Button href="#" variant="secondary" className="w-full text-sm">
+                <Button href={item.url} variant="secondary" className="w-full text-sm">
                   {item.name}
                 </Button>
               </div>

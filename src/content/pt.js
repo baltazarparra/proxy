@@ -126,11 +126,31 @@ export default {
     title: 'Comece com estrutura, não do zero',
     body: 'Reunimos templates prontos para cada etapa do fluxo. Use-os como ponto de partida: adapte, modifique, faça seu. O objetivo não é seguir um modelo rígido — é ter clareza desde o primeiro passo.',
     items: [
-      { name: 'PLAN', description: 'Template de planejamento de projeto' },
-      { name: 'ROADMAP', description: 'Template de roadmap de implementação' },
-      { name: 'PRD', description: 'Template de requisitos de produto' },
-      { name: 'Rules', description: 'Template para regras de qualidade e segurança do agente' },
-      { name: 'Skills', description: 'Template para habilidades reutilizáveis do agente' },
+      {
+        name: 'PLAN',
+        description: 'Template de planejamento de projeto',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/PLAN-TEMPLATE.md',
+      },
+      {
+        name: 'ROADMAP',
+        description: 'Template de roadmap de implementação',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/ROADMAP-TEMPLATE.md',
+      },
+      {
+        name: 'PRD',
+        description: 'Template de requisitos de produto',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/PRD-TEMPLATE.md',
+      },
+      {
+        name: 'Rules',
+        description: 'Template para regras de qualidade e segurança do agente',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/RULES-TEMPLATE.md',
+      },
+      {
+        name: 'Skills',
+        description: 'Template para habilidades reutilizáveis do agente',
+        url: 'https://github.com/baltazarparra/proxy/blob/main/templates/SKILLS-TEMPLATE.md',
+      },
     ],
   },
 
