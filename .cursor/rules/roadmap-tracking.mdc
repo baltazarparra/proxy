@@ -1,0 +1,19 @@
+---
+description: Track implementation progress in IMPLEMENTATION-ROADMAP.md
+alwaysApply: true
+---
+
+# Roadmap tracking
+
+When starting implementation work on this project, read
+`IMPLEMENTATION-ROADMAP.md` to identify the current phase and next pending task.
+
+When a task's "Done" criterion is fully satisfied during a coding session:
+
+1. Open `IMPLEMENTATION-ROADMAP.md`
+2. Find the task by its ID (e.g. `1.1`, `2.5`, `3.8`)
+3. Change `- [ ]` to `- [x]` for that task
+4. If all tasks in a phase are complete, also mark the phase checkpoint items
+
+Do not mark tasks that were only partially completed.
+Do not mark tasks whose "Done" criterion has not been verified.
