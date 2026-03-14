@@ -167,7 +167,7 @@ Before moving to Phase 2, verify:
 
 ### Tasks
 
-- [ ] **2.1**: Create copy data files
+- [x] **2.1**: Create copy data files
   - Create `src/content/pt.js` exporting a structured object with all 8 sections' copy in PT-BR
   - Create `src/content/en.js` exporting the same structure in EN
   - Structure: `{ hero: { title, subtitle, body }, agents: { title, body, categories }, tools: { title, body, lastUpdated, ide, cli, note }, plan: { title, body, steps }, roadmap: { title, body, steps }, execution: { title, body, steps }, templates: { title, body, items }, closing: { title, body, cta } }`
@@ -175,7 +175,7 @@ Before moving to Phase 2, verify:
   - Files created: `src/content/pt.js`, `src/content/en.js`
   - Done: both files export valid JS objects with identical keys
 
-- [ ] **2.2**: Create language context and hook
+- [x] **2.2**: Create language context and hook
   - Create a React context for current language (`pt` or `en`)
   - Create `useLanguage` hook that returns `{ lang, setLang, t }` where `t` is the current language's copy object
   - Default language: `pt`
@@ -183,7 +183,7 @@ Before moving to Phase 2, verify:
   - File created: `src/hooks/useLanguage.jsx` (context + provider + hook)
   - Done: calling `t.hero.title` returns the correct string for the current language
 
-- [ ] **2.3**: Build `LanguageToggle` component
+- [x] **2.3**: Build `LanguageToggle` component
   - Simple toggle or button group: PT / EN
   - Calls `setLang` from the language context
   - Positioned in the top-right corner (fixed or absolute)
@@ -192,14 +192,14 @@ Before moving to Phase 2, verify:
   - File created: `src/components/layout/LanguageToggle.jsx`
   - Done: clicking the toggle switches all visible text between PT-BR and EN
 
-- [ ] **2.4**: Build UI primitives
+- [x] **2.4**: Build UI primitives
   - `Button`: primary CTA style, accepts `href` for links, `variant` for styling
   - `SectionHeading`: renders section title with consistent typography and spacing
   - `CopyBlock`: renders body text with consistent paragraph styling
   - Files created: `src/components/ui/Button.jsx`, `src/components/ui/SectionHeading.jsx`, `src/components/ui/CopyBlock.jsx`
   - Done: each component renders correctly in isolation with sample content
 
-- [ ] **2.5**: Build `HeroSection`
+- [x] **2.5**: Build `HeroSection`
   - Full-viewport height hero
   - Displays: project name "Proxy", one-line framing, supporting statement
   - Subtle scroll cue (arrow or text hint)
@@ -208,50 +208,50 @@ Before moving to Phase 2, verify:
   - File created: `src/components/sections/HeroSection.jsx`
   - Done: hero fills the viewport, copy is bilingual, scroll cue is visible
 
-- [ ] **2.6**: Build `AgentsSection`
+- [x] **2.6**: Build `AgentsSection`
   - Explains IDE agents (Cursor, Trae) vs CLI agents (Claude Code, Codex, OpenCode)
   - Two categories rendered as structured blocks with tool descriptions
   - File created: `src/components/sections/AgentsSection.jsx`
   - Done: section renders with real copy, both categories visible, readable on mobile and desktop
 
-- [ ] **2.7**: Build `ToolsSection`
+- [x] **2.7**: Build `ToolsSection`
   - Displays current pricing tiers and installation instructions for each tool
   - Includes "last updated" disclaimer
   - Renders IDE and CLI tools as comparison tables or cards
   - File created: `src/components/sections/ToolsSection.jsx`
   - Done: section renders with pricing data, install commands, and disclaimer, responsive
 
-- [ ] **2.8**: Build `PlanSection`
+- [x] **2.8**: Build `PlanSection`
   - Explains how to create the initial PLAN.md using any LLM
   - Steps rendered as an ordered list or structured blocks
   - File created: `src/components/sections/PlanSection.jsx`
   - Done: section renders with real copy, responsive
 
-- [ ] **2.9**: Build `RoadmapSection`
+- [x] **2.9**: Build `RoadmapSection`
   - Explains how to have the code agent review the plan and create an IMPLEMENTATION-ROADMAP.md
   - Steps rendered as an ordered list or structured blocks
   - File created: `src/components/sections/RoadmapSection.jsx`
   - Done: section renders with real copy, responsive
 
-- [ ] **2.10**: Build `ExecutionSection`
+- [x] **2.10**: Build `ExecutionSection`
   - Explains the per-phase execution cycle (plan → PRD → implement → update → report → validate)
   - Steps rendered as an ordered list or structured blocks
   - File created: `src/components/sections/ExecutionSection.jsx`
   - Done: section renders with real copy, responsive
 
-- [ ] **2.11**: Build `TemplatesSection`
+- [x] **2.11**: Build `TemplatesSection`
   - Lists available templates with CTAs
   - CTA buttons can point to placeholder URLs for now
   - Uses `Button` component
   - File created: `src/components/sections/TemplatesSection.jsx`
   - Done: section renders with template cards/list and CTA buttons
 
-- [ ] **2.12**: Build `ClosingSection`
+- [x] **2.12**: Build `ClosingSection`
   - Final narrative statement + CTA to GitHub repo
   - File created: `src/components/sections/ClosingSection.jsx`
   - Done: section renders with closing message and GitHub CTA
 
-- [ ] **2.13**: Assemble full page in `App.jsx`
+- [x] **2.13**: Assemble full page in `App.jsx`
   - Import `PageShell`, `LanguageToggle`, and all 8 section components
   - Wrap in `LanguageProvider`
   - Render sections in order inside `PageShell`
@@ -259,7 +259,7 @@ Before moving to Phase 2, verify:
   - File modified: `src/App.jsx`
   - Done: full page scrolls through all 8 sections, language toggle works, all copy is real
 
-- [ ] **2.14**: Validate responsiveness
+- [x] **2.14**: Validate responsiveness
   - Check all sections at 375px (iPhone SE), 390px (iPhone 14), 768px (iPad), 1280px+ (desktop)
   - Fix any overflow, text wrapping, or spacing issues
   - Files modified: any section or layout components as needed
@@ -274,12 +274,12 @@ Before moving to Phase 2, verify:
 ### Phase 2 checkpoint
 
 Before moving to Phase 3, verify:
-- [ ] all 8 sections render with real copy
-- [ ] language toggle switches all text
-- [ ] page is responsive at mobile, tablet, and desktop widths
-- [ ] semantic HTML is used (`<section>`, `<h1>`–`<h3>`, `<p>`, `<button>`)
+- [x] all 8 sections render with real copy
+- [x] language toggle switches all text
+- [x] page is responsive at mobile, tablet, and desktop widths
+- [x] semantic HTML is used (`<section>`, `<h1>`–`<h3>`, `<p>`, `<button>`)
 - [ ] page is deployed and accessible on GitHub Pages
-- [ ] no 3D code has been added yet
+- [x] no 3D code has been added yet
 
 ---
 

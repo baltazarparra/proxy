@@ -1,29 +1,29 @@
+import { LanguageProvider } from './hooks/useLanguage'
 import PageShell from './components/layout/PageShell'
-import SectionContainer from './components/layout/SectionContainer'
+import LanguageToggle from './components/layout/LanguageToggle'
+import HeroSection from './components/sections/HeroSection'
+import AgentsSection from './components/sections/AgentsSection'
+import ToolsSection from './components/sections/ToolsSection'
+import PlanSection from './components/sections/PlanSection'
+import RoadmapSection from './components/sections/RoadmapSection'
+import ExecutionSection from './components/sections/ExecutionSection'
+import TemplatesSection from './components/sections/TemplatesSection'
+import ClosingSection from './components/sections/ClosingSection'
 
 export default function App() {
   return (
-    <PageShell>
-      <SectionContainer id="hero">
-        <h1 className="text-4xl font-bold text-foreground">Proxy</h1>
-        <p className="mt-4 text-muted">
-          Um guia pratico para desenvolvimento com agentes de codigo.
-        </p>
-        <p className="mt-2 text-accent font-semibold">Accent color active.</p>
-        <div className="mt-6 p-4 bg-surface rounded-lg">
-          <p>Surface background token.</p>
-        </div>
-        <p className="mt-4 hidden md:block text-sm text-muted">
-          Breakpoint test: visible only on md+ screens.
-        </p>
-      </SectionContainer>
-
-      <SectionContainer id="test">
-        <h2 className="text-2xl font-semibold text-foreground">Second Section</h2>
-        <p className="mt-4 text-muted gap-content">
-          Spacing rhythm verification — section padding and content gap.
-        </p>
-      </SectionContainer>
-    </PageShell>
+    <LanguageProvider>
+      <PageShell>
+        <LanguageToggle />
+        <HeroSection />
+        <AgentsSection />
+        <ToolsSection />
+        <PlanSection />
+        <RoadmapSection />
+        <ExecutionSection />
+        <TemplatesSection />
+        <ClosingSection />
+      </PageShell>
+    </LanguageProvider>
   )
 }

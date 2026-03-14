@@ -66,23 +66,25 @@
 
 > Report: `reports/phase-1-scaffold-and-design-system.md`
 
-### Phase 2 — Static Landing Structure (15 tasks)
+### Phase 2 — Static Landing Structure (15 tasks) ✓
 
-- [ ] 2.1: Create copy data files
-- [ ] 2.2: Create language context and hook
-- [ ] 2.3: Build `LanguageToggle` component
-- [ ] 2.4: Build UI primitives (Button, SectionHeading, CopyBlock)
-- [ ] 2.5: Build `HeroSection`
-- [ ] 2.6: Build `AgentsSection` (IDE vs CLI code agents)
-- [ ] 2.7: Build `ToolsSection` (pricing and installation)
-- [ ] 2.8: Build `PlanSection` (creating PLAN.md)
-- [ ] 2.9: Build `RoadmapSection` (agent review + IMPLEMENTATION-ROADMAP.md)
-- [ ] 2.10: Build `ExecutionSection` (per-phase execution cycle)
-- [ ] 2.11: Build `TemplatesSection`
-- [ ] 2.12: Build `ClosingSection`
-- [ ] 2.13: Assemble full page in `App.jsx`
-- [ ] 2.14: Validate responsiveness
-- [ ] 2.15: Deploy static version to GitHub Pages
+- [x] 2.1: Create copy data files
+- [x] 2.2: Create language context and hook
+- [x] 2.3: Build `LanguageToggle` component
+- [x] 2.4: Build UI primitives (Button, SectionHeading, CopyBlock)
+- [x] 2.5: Build `HeroSection`
+- [x] 2.6: Build `AgentsSection` (IDE vs CLI code agents)
+- [x] 2.7: Build `ToolsSection` (pricing and installation)
+- [x] 2.8: Build `PlanSection` (creating PLAN.md)
+- [x] 2.9: Build `RoadmapSection` (agent review + IMPLEMENTATION-ROADMAP.md)
+- [x] 2.10: Build `ExecutionSection` (per-phase execution cycle)
+- [x] 2.11: Build `TemplatesSection`
+- [x] 2.12: Build `ClosingSection`
+- [x] 2.13: Assemble full page in `App.jsx`
+- [x] 2.14: Validate responsiveness
+- [ ] 2.15: Deploy static version to GitHub Pages (pending push to main)
+
+> Report: `reports/phase-2-static-landing-structure.md`
 
 ### Phase 3 — 3D Notebook Foundation (12 tasks)
 
@@ -152,6 +154,6 @@
 
 ## Readiness Verdict
 
-**Verdict:** Ready — Phase 1 complete, Phase 2 next
+**Verdict:** Ready — Phase 2 complete, Phase 3 next
 
-**Justification:** All pre-requisites are resolved and Phase 1 (Scaffold and Design System) has been fully implemented. The project foundation is in place: Vite + React, Tailwind v4 with design tokens, GitHub Pages deployment pipeline, layout primitives, and SEO tags. All 12 Phase 1 tasks passed checkpoint verification. Phase 2 (Static Landing Structure) can begin immediately — draft copy exists in both languages (`docs/COPY-OUTLINE.md`), and the design system is ready to support the 8 content sections.
+**Justification:** All pre-requisites are resolved. Phase 1 (Scaffold and Design System, 12/12 tasks) and Phase 2 (Static Landing Structure, 14/15 tasks) are fully implemented. The page renders all 8 sections with real bilingual copy, a working language toggle, responsive layout, and semantic HTML. Task 2.15 (deploy) is pending a push to `main`. Phase 3 (3D Notebook Foundation) can begin immediately.
