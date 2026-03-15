@@ -256,35 +256,44 @@ export default {
 
   plan: {
     title: 'Start with a plan, not a prompt',
-    body: "Before opening the agent, create a PLAN.md. It turns your idea into decisions: what to build, which stack, how to deploy, what's out of scope.\n\nUse any LLM (ChatGPT, Claude, Gemini) to generate it. Explain your idea clearly and ask for a stack suggestion. The result is a markdown file that everyone on the project can use as reference.",
+    body: "Before opening the agent, create a PLAN.md. It turns your idea into decisions: what to build, which stack, how to deploy, what's out of scope.\n\nJumping straight to the prompt is tempting, but without a plan you'll spend your time course-correcting the agent. Use any LLM (ChatGPT, Claude, Gemini) to generate the draft: explain your idea clearly, ask for a stack suggestion. The result is a markdown file that serves as reference for the whole project.",
     steps: [
-      'First describe your idea: what it is, who it is for, what the limits are',
-      'Ask for a stack suggestion for the project',
-      'Review until it makes sense to you',
+      'Describe your idea: what it is, who it is for, what problem it solves',
+      'Define limits: what is in scope and what stays out',
+      'Use any LLM (ChatGPT, Claude, Gemini) to generate a draft',
+      'Ask for a stack suggestion aligned with the project and deployment',
+      'Review the text until it makes sense to you',
+      'Adjust whatever does not fit',
       'Save as PLAN.md at the project root',
     ],
   },
 
   roadmap: {
     title: 'Let the agent review and organize',
-    body: "PLAN ready? Take it to your agent (Cursor, Claude Code, whatever). Ask it to review knowing it'll be the one executing.\n\nThe agent analyzes, breaks into phases, and generates IMPLEMENTATION-ROADMAP.md. That file becomes the guide. Nothing gets built outside of it.",
+    body: "PLAN ready? Take it to your agent (Cursor, Claude Code, whatever). Ask it to review knowing it'll be the one executing.\n\nThat review isn't cosmetic: it's operational. The agent analyzes, identifies dependencies, breaks into phases, and generates IMPLEMENTATION-ROADMAP.md. That file becomes the guide. Nothing gets built outside of it.",
     steps: [
-      'Open PLAN.md in your agent',
+      'Open PLAN.md in your agent (Cursor, Claude Code, whatever)',
       'Ask for a review considering it will execute',
-      'Ask it to break the work into phases',
-      'Ask it to generate IMPLEMENTATION-ROADMAP.md',
+      'Ask it to identify dependencies between parts of the work',
+      'Ask it to break the work into development phases',
+      'Ask for atomic tasks with clear completion criteria',
+      'Review the generated roadmap and adjust as needed',
+      'Save as IMPLEMENTATION-ROADMAP.md — nothing gets built outside of it',
     ],
   },
 
   execution: {
     title: 'Execute, validate, advance',
-    body: "With the roadmap set, each phase is a unit: the agent plans, generates a PRD, executes. At the end you update the roadmap and note what got done. Only advance when you've validated.\n\nThat way you don't pile up technical debt and you always know where the project stands.",
+    body: "With the roadmap set, each phase is a unit: the agent plans, generates a PRD, executes. At the end you update the roadmap and note what got done.\n\nValidation is the brake. It's not just running tests: it's checking that the product does what the plan said it would. Only advance when you've validated. That way you don't pile up technical debt and you always know where the project stands.",
     steps: [
-      'Ask the agent to create a plan for the phase',
+      'Pick the current phase from the roadmap',
+      'Ask the agent for an execution plan for that phase',
       'Ask for a PRD for the implementation',
-      'Execute the phase',
-      'At the end, update the roadmap and note what was done',
-      'Validate and move to the next phase',
+      'Execute the phase tasks',
+      'Run tests and validate what was done',
+      'Update the roadmap: mark completed tasks',
+      'Only advance to the next phase after validating',
+      'Repeat the cycle until the project is done',
     ],
   },
 

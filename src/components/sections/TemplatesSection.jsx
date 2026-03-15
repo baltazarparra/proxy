@@ -25,11 +25,10 @@ export default function TemplatesSection() {
               key={item.name}
               className="bg-surface border-accent/20 flex flex-col rounded-lg border-t-2 p-4 md:p-5"
             >
-              <p className="text-accent text-lg font-semibold">{item.name}</p>
               <p className="text-muted mt-2 flex-1 text-sm">{item.description}</p>
               <div className="mt-4">
                 <Button href={item.url} variant="secondary" className="w-full text-sm">
-                  {item.name}
+                  {`${item.name}.md`}
                 </Button>
               </div>
             </div>

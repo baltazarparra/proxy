@@ -48,17 +48,18 @@ Rodam no terminal, sem interface gráfica. Você conversa com o agente por texto
 
 **title:** Comece com um plano, não com um prompt
 **body:**
-Antes de abrir o agente de código, crie um PLAN.md. É o documento que transforma sua ideia em decisões concretas: o que vai ser construído, qual stack usar, como vai ser o deploy e o que fica de fora.
+Antes de abrir o agente, crie um PLAN.md. Ele transforma sua ideia em decisões: o que construir, qual stack, como fazer deploy, o que fica de fora.
 
-Você pode usar qualquer LLM pra gerar o plano inicial, como ChatGPT, Claude ou Gemini. O importante é explicar sua ideia com clareza: o que você quer construir, pra quem, com quais restrições. Peça uma sugestão de stack baseada no tipo de projeto e no modelo de deploy.
-
-O resultado tem que ser um arquivo markdown sólido que funciona como fonte da verdade pra todo o desenvolvimento.
+Pular direto pro prompt é tentador, mas sem um plano você rebate bola com o agente o tempo todo. Use qualquer LLM (ChatGPT, Claude, Gemini) pra gerar o rascunho: explique sua ideia com clareza, peça sugestão de stack. O resultado é um markdown que serve de referência pro projeto todo.
 
 **steps:**
 
-- Descreva sua ideia com contexto: tipo de produto, público, restrições
-- Peça uma sugestão de stack alinhada ao projeto
-- Revise e ajuste o plano até que faça sentido pra você
+- Descreva sua ideia: o que é, pra quem, qual problema resolve
+- Defina limites: o que entra e o que fica de fora
+- Use qualquer LLM (ChatGPT, Claude, Gemini) pra gerar um rascunho
+- Peça sugestão de stack alinhada ao projeto e ao deploy
+- Revise o texto até fazer sentido pra você
+- Ajuste o que não encaixar
 - Salve como PLAN.md na raiz do projeto
 
 ---
@@ -67,18 +68,19 @@ O resultado tem que ser um arquivo markdown sólido que funciona como fonte da v
 
 **title:** Deixe o agente revisar e organizar
 **body:**
-Com o PLAN.md pronto, leve ele pro seu agente de código, seja Cursor, Claude Code ou qualquer outro. Peça pro agente revisar o plano sabendo que ele mesmo vai executar o trabalho.
+PLAN pronto? Leva pro agente (Cursor, Claude Code, qualquer um). Pede pra ele revisar sabendo que vai executar.
 
-O agente analisa o plano, identifica dependências, separa o trabalho em fases e cria um IMPLEMENTATION-ROADMAP.md, que é um roteiro com tarefas atômicas organizadas por fase, cada uma com critérios claros de conclusão.
-
-O roadmap vira o guia central da execução. Nada é implementado fora dele.
+A revisão dele não é cosmética: é operacional. O agente analisa, identifica dependências, quebra em fases e gera o IMPLEMENTATION-ROADMAP.md. Esse arquivo vira o guia. Nada é feito fora dele.
 
 **steps:**
 
-- Abra o PLAN.md no seu agente de código
-- Peça uma revisão considerando que o agente vai executar
-- Peça pra separar o trabalho em fases de desenvolvimento
-- Peça pra gerar um IMPLEMENTATION-ROADMAP.md com tarefas por fase
+- Abra o PLAN.md no seu agente (Cursor, Claude Code, qualquer um)
+- Peça uma revisão considerando que ele vai executar
+- Peça que ele identifique dependências entre partes do trabalho
+- Peça que quebre o trabalho em fases de desenvolvimento
+- Peça tarefas atômicas com critério claro de conclusão
+- Revise o roadmap gerado e ajuste o que precisar
+- Salve como IMPLEMENTATION-ROADMAP.md — nada é feito fora dele
 
 ---
 
@@ -86,18 +88,20 @@ O roadmap vira o guia central da execução. Nada é implementado fora dele.
 
 **title:** Execute, valide, avance
 **body:**
-Com o roadmap definido, a execução segue um ciclo por fase. Cada fase funciona como uma unidade completa: o agente cria um plano de execução, gera uma PRD pra implementação, executa as tarefas, e no final você atualiza o roadmap e gera um relatório do que foi feito.
+Com o roadmap pronto, cada fase é uma unidade: o agente planeja, gera PRD, executa. No fim você atualiza o roadmap e anota o que foi feito.
 
-Só avance pra próxima fase depois de validar a atual. Esse ciclo evita acúmulo de dívida técnica e mantém o projeto previsível do começo ao fim.
+A validação é o freio. Não é só rodar testes: é conferir que o produto faz o que o plano previu. Só avança quando validar. Assim você não acumula dívida técnica e sabe sempre onde o projeto tá.
 
 **steps:**
 
-- Peça ao agente pra criar um plano de execução da fase atual
+- Escolha a fase atual no roadmap
+- Peça ao agente um plano de execução dessa fase
 - Peça uma PRD pra implementação
-- Execute a fase
-- Atualize o status do roadmap (marque tarefas concluídas)
-- Gere um relatório do que foi implementado
-- Valide e passe pra próxima fase
+- Execute as tarefas da fase
+- Rode os testes e valide o que foi feito
+- Atualize o roadmap: marque tarefas concluídas
+- Só avance pra próxima fase depois de validar
+- Repita o ciclo até o fim do projeto
 
 ---
 
@@ -168,18 +172,19 @@ Run in the terminal, no graphical interface. You talk to the agent through text,
 
 **title:** Start with a plan, not a prompt
 **body:**
-Before opening the code agent, create a PLAN.md. This is the document that turns your idea into concrete decisions: what gets built, which stack to use, how it'll be deployed, and what stays out of scope.
+Before opening the agent, create a PLAN.md. It turns your idea into decisions: what to build, which stack, how to deploy, what's out of scope.
 
-You can use any LLM to generate the initial plan, like ChatGPT, Claude, or Gemini. What matters is explaining your idea clearly: what you want to build, who it's for, and what the constraints are. Ask for a stack suggestion based on the project type and deployment model.
-
-The result should be a solid markdown file that works as the source of truth for all development.
+Jumping straight to the prompt is tempting, but without a plan you'll spend your time course-correcting the agent. Use any LLM (ChatGPT, Claude, Gemini) to generate the draft: explain your idea clearly, ask for a stack suggestion. The result is a markdown file that serves as reference for the whole project.
 
 **steps:**
 
-- Describe your idea with context: product type, audience, constraints
-- Ask for a stack suggestion aligned to the project
-- Review and tweak the plan until it makes sense to you
-- Save it as PLAN.md at the project root
+- Describe your idea: what it is, who it is for, what problem it solves
+- Define limits: what is in scope and what stays out
+- Use any LLM (ChatGPT, Claude, Gemini) to generate a draft
+- Ask for a stack suggestion aligned with the project and deployment
+- Review the text until it makes sense to you
+- Adjust whatever does not fit
+- Save as PLAN.md at the project root
 
 ---
 
@@ -187,18 +192,19 @@ The result should be a solid markdown file that works as the source of truth for
 
 **title:** Let the agent review and organize
 **body:**
-With the PLAN.md ready, take it to your code agent, whether that's Cursor, Claude Code, or whatever you prefer. Ask the agent to review the plan knowing that it'll be the one doing the work.
+PLAN ready? Take it to your agent (Cursor, Claude Code, whatever). Ask it to review knowing it'll be the one executing.
 
-The agent analyzes the plan, identifies dependencies, breaks the work into phases, and creates an IMPLEMENTATION-ROADMAP.md, a roadmap with atomic tasks organized by phase, each with clear completion criteria.
-
-The roadmap becomes the central guide for execution. Nothing gets built outside of it.
+That review isn't cosmetic: it's operational. The agent analyzes, identifies dependencies, breaks into phases, and generates IMPLEMENTATION-ROADMAP.md. That file becomes the guide. Nothing gets built outside of it.
 
 **steps:**
 
-- Open PLAN.md in your code agent
-- Ask for a review considering the agent will be the one executing it
+- Open PLAN.md in your agent (Cursor, Claude Code, whatever)
+- Ask for a review considering it will execute
+- Ask it to identify dependencies between parts of the work
 - Ask it to break the work into development phases
-- Ask it to generate an IMPLEMENTATION-ROADMAP.md with tasks per phase
+- Ask for atomic tasks with clear completion criteria
+- Review the generated roadmap and adjust as needed
+- Save as IMPLEMENTATION-ROADMAP.md — nothing gets built outside of it
 
 ---
 
@@ -206,18 +212,20 @@ The roadmap becomes the central guide for execution. Nothing gets built outside 
 
 **title:** Execute, validate, advance
 **body:**
-With the roadmap set, execution follows a per-phase cycle. Each phase works as a complete unit: the agent creates an execution plan, generates a PRD for the implementation, runs the tasks, and at the end you update the roadmap and generate a report of what got done.
+With the roadmap set, each phase is a unit: the agent plans, generates a PRD, executes. At the end you update the roadmap and note what got done.
 
-Only move to the next phase after validating the current one. This cycle prevents technical debt from piling up and keeps the project predictable from start to finish.
+Validation is the brake. It's not just running tests: it's checking that the product does what the plan said it would. Only advance when you've validated. That way you don't pile up technical debt and you always know where the project stands.
 
 **steps:**
 
-- Ask the agent to create an execution plan for the current phase
+- Pick the current phase from the roadmap
+- Ask the agent for an execution plan for that phase
 - Ask for a PRD for the implementation
-- Execute the phase
-- Update the roadmap status (mark completed tasks)
-- Generate a report of what was implemented
-- Validate and move on to the next phase
+- Execute the phase tasks
+- Run tests and validate what was done
+- Update the roadmap: mark completed tasks
+- Only advance to the next phase after validating
+- Repeat the cycle until the project is done
 
 ---
 

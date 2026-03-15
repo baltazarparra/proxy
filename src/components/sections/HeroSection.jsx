@@ -22,7 +22,7 @@ export default function HeroSection() {
       className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center"
     >
       <div ref={revealRef} className="mx-auto max-w-3xl">
-        <h1 className="text-accent text-4xl font-bold tracking-tight md:text-6xl">
+        <h1 className="text-accent text-4xl font-normal tracking-tight md:text-6xl">
           <BrandText>{t.hero.title}</BrandText>
         </h1>
         <p className="text-foreground/70 mt-4 text-xl md:text-2xl">{t.hero.subtitle}</p>

@@ -31,7 +31,7 @@ gu**ia** presents a simple, practical workflow that helps beginners build with m
 | Use case                    | What to read                                                                                                                                                                         |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Bootstrap a new project** | [llms.txt](https://baltazarparra.github.io/guia/llms.txt) — paste this URL into your agent. It will interview the user and create PLAN.md, IMPLEMENTATION-ROADMAP.md, and AGENTS.md. |
-| **Contribute to gu**ia\*\*  | [AGENTS.md](AGENTS.md) — project rules, constraints, and validation workflow.                                                                                                        |
+| Contribute to gu**ia**      | [AGENTS.md](AGENTS.md) — project rules, constraints, and validation workflow.                                                                                                        |
 
 ## Local development
 
