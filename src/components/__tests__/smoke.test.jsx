@@ -20,7 +20,7 @@ describe('smoke tests', () => {
     expect(screen.getByText('Guia prático')).toBeInTheDocument()
   })
 
-  it('renders all 10 section IDs', () => {
+  it('renders all 9 section IDs', () => {
     const { container } = render(<App />)
     const expectedIds = [
       'hero',
@@ -32,7 +32,6 @@ describe('smoke tests', () => {
       'bootstrap',
       'templates',
       'glossary',
-      'closing',
     ]
 
     for (const id of expectedIds) {

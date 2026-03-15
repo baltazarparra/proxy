@@ -23,7 +23,7 @@ export default function PlanSection() {
           ))}
         </CopyBlock>
 
-        <ol className="text-foreground/80 marker:text-accent mt-10 list-inside list-decimal space-y-3 text-base leading-relaxed text-shadow-[var(--text-shadow-readable)] md:text-lg">
+        <ol className="text-foreground/80 marker:text-accent mt-10 list-inside list-decimal space-y-3 text-base leading-relaxed md:text-lg">
           {t.plan.steps.map((step, i) => (
             <li key={i} className="pl-2">
               {step}

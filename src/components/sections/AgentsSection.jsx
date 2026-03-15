@@ -71,7 +71,7 @@ export default function AgentsSection() {
                 <button
                   type="button"
                   onClick={() => handleOpenModal(category)}
-                  className="text-accent hover:text-accent/90 focus:ring-accent/50 focus:ring-offset-background mb-3 cursor-pointer rounded text-left text-lg font-semibold transition-colors text-shadow-[var(--text-shadow-heading)] focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                  className="text-accent hover:text-accent/90 focus:ring-accent/50 focus:ring-offset-background mb-3 cursor-pointer rounded text-left text-lg font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                 >
                   {category.name}
                 </button>

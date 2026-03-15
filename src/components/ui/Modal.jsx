@@ -76,10 +76,7 @@ export default function Modal({ isOpen, onClose, title, closeLabel = 'Close', ch
         onClick={(e) => e.stopPropagation()}
       >
         <div className="border-accent/10 flex items-start justify-between gap-4 border-b px-6 py-4">
-          <h2
-            id="modal-title"
-            className="text-accent text-xl font-semibold text-shadow-[var(--text-shadow-heading)]"
-          >
+          <h2 id="modal-title" className="text-accent text-xl font-semibold">
             {title}
           </h2>
           <button

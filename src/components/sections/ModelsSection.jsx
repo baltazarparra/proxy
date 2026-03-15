@@ -42,9 +42,7 @@ function ModelCard({ model, onClick, index }) {
     >
       <div className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-3">
-          <p className="text-accent min-w-0 text-lg font-semibold text-shadow-[var(--text-shadow-heading)]">
-            {model.name}
-          </p>
+          <p className="text-accent min-w-0 text-lg font-semibold">{model.name}</p>
           <span className="text-muted bg-background shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium">
             {model.costLabel}
           </span>

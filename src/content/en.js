@@ -3,6 +3,7 @@ export default {
     closeLabel: 'Close',
     toolsLabel: 'Tools:',
     contextLabel: 'Context:',
+    sourceLabel: 'Source:',
     availableInLabel: 'Available in:',
     strengthsLabel: 'Strengths:',
   },
@@ -336,50 +337,110 @@ export default {
         term: 'Model / LLM',
         definition:
           'The "brain" of AI. A massive model trained on the entire internet\'s text. Generates code, text, and sometimes makes stuff up.',
+        modalContent: {
+          extendedBody:
+            'Large Language Model (LLM) is a deep-learning model trained on vast amounts of text. It uses billions of parameters and works as a general-purpose sequence model: generates, summarizes, translates, and reasons over text.\n\nIt works as a statistical prediction machine, predicting the next word in a sequence. The most capable ones are GPTs that power modern chatbots. They understand language at scale but inherit inaccuracies and biases from training data.',
+          sourceName: 'IBM',
+          sourceUrl: 'https://www.ibm.com/topics/large-language-models',
+        },
       },
       {
         term: 'Prompt',
         definition: 'The instruction you send to the AI. Clear = good output. Vague = surprises.',
+        modalContent: {
+          extendedBody:
+            "Prompt engineering is the process of designing and optimizing input instructions to guide the model's responses. It's writing effective instructions so the model consistently generates content that meets your requirements.\n\nBecause output is non-deterministic, it requires a mix of art and science. Best practices: be clear and specific, provide enough context, use examples, separate instructions from context with delimiters, specify desired format and style.",
+          sourceName: 'OpenAI',
+          sourceUrl: 'https://platform.openai.com/docs/guides/prompt-engineering',
+        },
       },
       {
         term: 'Code Agent',
         definition:
           "An AI that doesn't just answer, it acts. Does what a junior dev would: reads files, edits, runs commands. Just 24/7.",
+        modalContent: {
+          extendedBody:
+            'A code agent is an autonomous or semi-autonomous system powered by LLMs that plans, generates, executes, and verifies code with minimal human intervention. Unlike autocomplete, which only suggests, the agent reasons about objectives and acts independently.\n\nIt operates in a loop: receives prompt and codebase context, decomposes tasks into steps, executes tools (compiler, tests, linter), reflects on errors and refines. Works as a capable collaborator, not a passive assistant.',
+          sourceName: 'Wikipedia',
+          sourceUrl: 'https://en.wikipedia.org/wiki/Agentic_coding',
+        },
       },
       {
         term: 'Context Window',
         definition:
           'The AI\'s "working memory." Everything it can consider at once. Once the window\'s full, it forgets the start of the conversation.',
+        modalContent: {
+          extendedBody:
+            'Context window is the maximum amount of text, in tokens, that the model can process and "remember" at once. It functions as working memory, like human short-term memory.\n\nIt defines the boundaries within which the AI stays effective. Information outside the window is not accessible. When text exceeds the limit, it must be truncated or summarized, which can cause incomplete or inaccurate output. Modern models reach context windows of 1 million tokens.',
+          sourceName: 'IBM',
+          sourceUrl: 'https://www.ibm.com/think/topics/context-window',
+        },
       },
       {
         term: 'Token',
         definition:
           'The unit of text the AI processes. Not exactly a word, more like a piece of one. You pay per token, so yes, every comma counts.',
+        modalContent: {
+          extendedBody:
+            'Token is the fundamental unit that makes up the context window. It can be a character, part of a word, a whole word, or even a short phrase. Tokenization breaks text into manageable units using algorithms like WordPiece or Byte Pair Encoding.\n\nThat\'s how the AI "sees" text. You pay per token in many APIs, so longer text costs more. In English, a word usually becomes 1 to 2 tokens.',
+          sourceName: 'IBM',
+          sourceUrl: 'https://www.ibm.com/think/topics/context-window',
+        },
       },
       {
         term: 'Hallucination',
         definition:
           "When the AI makes stuff up with total confidence. Looks right, sounds logical, but it's completely wrong. Always double-check.",
+        modalContent: {
+          extendedBody:
+            'AI hallucination is a response that contains false or misleading information presented as fact. Also called confabulation or bullshitting in AI contexts.\n\nIt happens when the model produces factually incorrect or nonsensical output that sounds plausible enough to be hard to spot. Common causes: flawed training data, overfitting, training incentives that reward guessing instead of acknowledging uncertainty. Always verify facts and generated code.',
+          sourceName: 'IBM',
+          sourceUrl: 'https://www.ibm.com/think/topics/ai-hallucinations',
+        },
       },
       {
         term: 'RAG',
         definition:
           'Instead of making stuff up, the AI looks up real info first, then answers. Like cheating on a test, but with sources.',
+        modalContent: {
+          extendedBody:
+            "Retrieval-Augmented Generation (RAG) is a technique that lets the LLM retrieve and incorporate information from external sources before generating a response. Instead of relying only on static training data, the AI accesses current, domain-specific information.\n\nIt works by first retrieving relevant chunks from databases or documents, then using that to guide generation. Reduces hallucinations, allows citing sources, overcomes the model's knowledge cutoff, and avoids retraining with new data.",
+          sourceName: 'IBM',
+          sourceUrl: 'https://www.ibm.com/think/topics/retrieval-augmented-generation',
+        },
       },
       {
         term: 'MCP',
         definition:
           'A standard that connects AI to external tools (databases, APIs, files). Like a universal USB adapter for AI.',
+        modalContent: {
+          extendedBody:
+            "Model Context Protocol (MCP) is an open standard from Anthropic that connects AI assistants to external data sources and tools securely. It's a universal protocol for integrating LLMs with repositories, business tools, and development environments.\n\nIt solves fragmentation: before, each developer built custom connectors. Now a single standardized protocol. Uses a client-server model with JSON-RPC 2.0. Servers offer tools, prompts, and resources. Claude Desktop, Zed, Replit, and others already integrate.",
+          sourceName: 'Anthropic',
+          sourceUrl: 'https://www.anthropic.com/news/model-context-protocol',
+        },
       },
       {
         term: 'Vibe Coding',
         definition:
           'Programming by describing what you want in plain language and letting the AI write the code. Works great until it breaks. Then you need a method.',
+        modalContent: {
+          extendedBody:
+            'Vibe coding is programming by describing in plain language what you want to build and letting AI tools implement it. The "vibe" is capturing the essence of what you want without writing code manually.\n\nTypical flow: describe ("create a todo app with dark mode and drag-and-drop"), AI generates code, you test and iterate with new prompts. Critics point to lack of accountability, security vulnerabilities, and bugs in generated code. The term was coined by Andrej Karpathy in 2025.',
+          sourceName: 'Wikipedia',
+          sourceUrl: 'https://en.wikipedia.org/wiki/Vibe_coding',
+        },
       },
       {
         term: 'Fine-tuning',
         definition:
           'Training a base model on your own data so it gets good at a specific task. Like teaching a generalist chef to only make sushi.',
+        modalContent: {
+          extendedBody:
+            "Fine-tuning is adapting a pre-trained model to a different or more specific task by training it on task-specific data. It's a form of transfer learning that reuses knowledge from the original training.\n\nIt can update all parameters or only a subset (frozen vs unfrozen layers). Full fine-tuning usually yields better results but is more expensive. Techniques like LoRA allow fine-tuning models with billions of parameters using only millions of additional parameters.",
+          sourceName: 'OpenAI',
+          sourceUrl: 'https://platform.openai.com/docs/guides/fine-tuning',
+        },
       },
     ],
   },
@@ -388,5 +449,9 @@ export default {
     title: 'Structure is speed.',
     body: "Good agent development doesn't start with a prompt. It starts with a plan. Right tool, clear plan, organized roadmap. Each step makes it clearer what the agent should do. Simple flow works better than chaotic prompts.",
     cta: 'View on GitHub',
+  },
+
+  footer: {
+    bibliographyTitle: 'Bibliography',
   },
 }

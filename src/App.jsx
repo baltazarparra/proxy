@@ -10,7 +10,7 @@ import ExecutionSection from './components/sections/ExecutionSection'
 import BootstrapSection from './components/sections/BootstrapSection'
 import TemplatesSection from './components/sections/TemplatesSection'
 import GlossarySection from './components/sections/GlossarySection'
-import ClosingSection from './components/sections/ClosingSection'
+import Footer from './components/layout/Footer'
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
         <BootstrapSection />
         <TemplatesSection />
         <GlossarySection />
-        <ClosingSection />
+        <Footer />
       </PageShell>
     </LanguageProvider>
   )
