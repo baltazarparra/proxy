@@ -3,6 +3,7 @@ import PageShell from './components/layout/PageShell'
 import LanguageToggle from './components/layout/LanguageToggle'
 import HeroSection from './components/sections/HeroSection'
 import AgentsSection from './components/sections/AgentsSection'
+import ModesSection from './components/sections/ModesSection'
 import ModelsSection from './components/sections/ModelsSection'
 import PlanSection from './components/sections/PlanSection'
 import RoadmapSection from './components/sections/RoadmapSection'
@@ -21,6 +22,7 @@ export default function App() {
         <HeroSection />
         <GlossarySection />
         <AgentsSection />
+        <ModesSection />
         <ModelsSection />
         <PlanSection />
         <RoadmapSection />

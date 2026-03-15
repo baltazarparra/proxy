@@ -92,6 +92,56 @@ export default {
     ],
   },
 
+  modes: {
+    title: 'Os 3 modos do agente',
+    body: 'Dentro do painel do agente você escolhe o modo: Agent, Plan ou Ask. Cada um faz uma coisa diferente. Saber qual usar economiza tempo e evita surpresa.',
+    whenToUseLabel: 'Quando usar:',
+    items: [
+      {
+        id: 'agent',
+        name: 'Agent',
+        summary:
+          'Executa. Lê o codebase, edita arquivos, roda terminal, corrige erros. É o modo padrão pra construir features, refatorar e debugar.',
+        extendedBody:
+          'O Agent busca no projeto, edita vários arquivos e roda comandos sozinho. Você dá a tarefa em linguagem natural e ele decide o que ler, o que mudar e como validar. Pode delegar a subagentes pra pesquisa, shell ou browser. Use pra maioria das tarefas.',
+        whenToUse: [
+          'Features novas',
+          'Refatoração',
+          'Correção de bugs',
+          'Testes',
+          'Comandos no terminal',
+        ],
+      },
+      {
+        id: 'plan',
+        name: 'Plan',
+        summary:
+          'Planeja antes de codar. Pesquisa o codebase, faz perguntas, gera um plano editável. Você aprova e aí ele implementa.',
+        extendedBody:
+          'O Plan mode gera um plano detalhado antes de escrever código. O agente explora o projeto, pode pedir clarificações e abre o plano como arquivo virtual pra você editar. Quando estiver ok, clica em Build e ele começa a implementar. Ideal quando o escopo é grande ou há várias abordagens possíveis.',
+        whenToUse: [
+          'Decisões de arquitetura',
+          'Requisitos pouco claros',
+          'Tarefas que tocam muitos arquivos',
+          'Features complexas com múltiplas soluções',
+        ],
+      },
+      {
+        id: 'ask',
+        name: 'Ask',
+        summary:
+          'Só responde. Modo somente leitura. Explica código, explora arquitetura, responde perguntas — sem alterar nada.',
+        extendedBody:
+          'O Ask mode é read-only. O agente responde perguntas sobre o projeto sem fazer alterações. Use pra entender relações entre módulos, encontrar configurações, explicar funções ou fluxos. Se a resposta levar a mudanças, mude pro Agent.',
+        whenToUse: [
+          '"Explica a relação entre esses módulos"',
+          '"Onde está a config do banco?"',
+          '"Como funciona o fluxo de auth?"',
+        ],
+      },
+    ],
+  },
+
   models: {
     title: 'Os modelos por trás dos agentes',
     body: 'O modelo que você escolhe define o custo, a velocidade e a qualidade. Aqui os 12 mais usados.',

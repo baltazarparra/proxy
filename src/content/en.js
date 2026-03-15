@@ -92,6 +92,50 @@ export default {
     ],
   },
 
+  modes: {
+    title: 'The 3 agent modes',
+    body: 'Inside the agent panel you pick the mode: Agent, Plan, or Ask. Each does something different. Knowing which to use saves time and avoids surprises.',
+    whenToUseLabel: 'When to use:',
+    items: [
+      {
+        id: 'agent',
+        name: 'Agent',
+        summary:
+          'Executes. Reads the codebase, edits files, runs terminal, fixes errors. The default mode for building features, refactoring, and debugging.',
+        extendedBody:
+          'Agent searches the project, edits multiple files, and runs commands on its own. You give the task in plain language and it decides what to read, what to change, and how to validate. It can delegate to subagents for research, shell, or browser. Use for most tasks.',
+        whenToUse: ['New features', 'Refactoring', 'Bug fixes', 'Tests', 'Terminal commands'],
+      },
+      {
+        id: 'plan',
+        name: 'Plan',
+        summary:
+          'Plans before coding. Researches the codebase, asks questions, generates an editable plan. You approve and then it implements.',
+        extendedBody:
+          'Plan mode generates a detailed plan before writing any code. The agent explores the project, may ask for clarifications, and opens the plan as a virtual file for you to edit. When you are happy, click Build and it starts implementing. Ideal when scope is large or there are multiple valid approaches.',
+        whenToUse: [
+          'Architectural decisions',
+          'Unclear requirements',
+          'Tasks touching many files',
+          'Complex features with multiple solutions',
+        ],
+      },
+      {
+        id: 'ask',
+        name: 'Ask',
+        summary:
+          'Answers only. Read-only mode. Explains code, explores architecture, answers questions — without changing anything.',
+        extendedBody:
+          'Ask mode is read-only. The agent answers questions about the project without making changes. Use it to understand relationships between modules, find configurations, explain functions or flows. If the answer leads to changes, switch to Agent.',
+        whenToUse: [
+          '"Explain the relationship between these modules"',
+          '"Where is the database config?"',
+          '"How does the auth flow work?"',
+        ],
+      },
+    ],
+  },
+
   models: {
     title: 'The models behind the agents',
     body: 'The model you pick defines cost, speed, and quality. Here are the 12 most used today.',

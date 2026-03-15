@@ -7,6 +7,7 @@
 export const SECTION_ORDER = [
   'hero',
   'agents',
+  'modes',
   'models',
   'tools',
   'plan',
@@ -20,6 +21,7 @@ export const SECTION_ORDER = [
 const diamondStates = {
   hero: { position: [0, 0, 0], rotation: [-0.1, 0.3, 0] },
   agents: { position: [0.2, 0, -0.2], rotation: [-0.05, 0.5, 0.02] },
+  modes: { position: [0.15, -0.05, -0.25], rotation: [-0.06, 0.6, 0.01] },
   models: { position: [0.1, -0.1, -0.3], rotation: [-0.08, 0.7, 0] },
   tools: { position: [0, -0.1, -0.2], rotation: [-0.1, 0.9, 0.03] },
   plan: { position: [-0.2, 0.05, -0.1], rotation: [-0.15, -0.4, 0.02] },
