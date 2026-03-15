@@ -445,6 +445,11 @@ export default {
     ],
   },
 
+  dip: {
+    headline: 'Precisa de um fluxo mais completo para desenvolver tarefas maiores?',
+    cta: 'Conheça o DIP',
+  },
+
   closing: {
     title: 'Estrutura é velocidade.',
     body: 'Bom dev com agentes não começa com prompt. Começa com plano. Ferramenta certa, plano claro, roadmap organizado. Cada passo deixa mais claro o que o agente precisa fazer. Fluxo simples funciona melhor que prompt caótico.',

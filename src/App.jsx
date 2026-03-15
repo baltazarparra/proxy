@@ -10,6 +10,7 @@ import ExecutionSection from './components/sections/ExecutionSection'
 import BootstrapSection from './components/sections/BootstrapSection'
 import TemplatesSection from './components/sections/TemplatesSection'
 import GlossarySection from './components/sections/GlossarySection'
+import DipCtaSection from './components/sections/DipCtaSection'
 import Footer from './components/layout/Footer'
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <BootstrapSection />
         <TemplatesSection />
         <GlossarySection />
+        <DipCtaSection />
         <Footer />
       </PageShell>
     </LanguageProvider>
