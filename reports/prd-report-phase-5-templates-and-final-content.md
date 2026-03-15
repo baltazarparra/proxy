@@ -13,7 +13,7 @@
 | Decision                                                                        | Justification                                                                                                         |
 | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Create template files inside this repo under `templates/`                       | User preference; keeps templates co-located with the project they exemplify; no external repo dependency              |
-| Use `https://github.com/baltazarparra/proxy` as the canonical GitHub URL        | Confirmed by user as the actual repo location                                                                         |
+| Use `https://github.com/baltazarparra/guia` as the canonical GitHub URL         | Confirmed by user as the actual repo location                                                                         |
 | Templates in EN only (page copy remains bilingual)                              | Standard practice for developer templates; avoids maintaining parallel translated template files                      |
 | Base templates on actual project files (PLAN.md, AGENTS.md, PRD template, etc.) | Produces realistic, battle-tested templates rather than generic boilerplate; the project itself is the best reference |
 | Add `url` field to template items in content files                              | Non-breaking schema extension; allows component to read URLs from data rather than hardcoding                         |

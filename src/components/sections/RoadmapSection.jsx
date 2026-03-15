@@ -12,7 +12,10 @@ export default function RoadmapSection() {
 
   return (
     <SectionContainer id="roadmap">
-      <div ref={revealRef}>
+      <div
+        ref={revealRef}
+        className="rounded-lg border border-white/5 bg-black/30 px-6 py-6 backdrop-blur-sm md:px-8 md:py-8"
+      >
         <SectionHeading>{t.roadmap.title}</SectionHeading>
         <CopyBlock>
           {t.roadmap.body.split('\n\n').map((paragraph, i) => (
@@ -20,7 +23,7 @@ export default function RoadmapSection() {
           ))}
         </CopyBlock>
 
-        <ol className="text-foreground/80 marker:text-accent mt-10 list-inside list-decimal space-y-3 text-base leading-relaxed md:text-lg">
+        <ol className="text-foreground/80 marker:text-accent mt-10 list-inside list-decimal space-y-3 text-base leading-relaxed text-shadow-[var(--text-shadow-readable)] md:text-lg">
           {t.roadmap.steps.map((step, i) => (
             <li key={i} className="pl-2">
               {step}

@@ -12,7 +12,7 @@
 
 | Decision                                                 | Justification                                                                                                                                                     |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Replace `USERNAME` with `baltazarparra` in all meta tags | Matches the GitHub repository URL already used in ClosingSection CTA (`https://github.com/baltazarparra/proxy`)                                                   |
+| Replace `USERNAME` with `baltazarparra` in all meta tags | Matches the GitHub repository URL already used in ClosingSection CTA (`https://github.com/baltazarparra/guia`)                                                    |
 | Add dynamic `<html lang>` switching                      | Improves accessibility and SEO — screen readers and search engines need the correct language attribute. The `useLanguage` hook already tracks the active language |
 | Generate OG image with AI                                | Faster than manual design; standard 1200×630px branded card is sufficient for V1. Can be replaced with a custom design later                                      |
 | Generate SVG favicon                                     | SVG favicons are supported in 95%+ of modern browsers; no `.ico` fallback needed for V1. Keeps the asset pipeline simple                                          |
@@ -28,7 +28,7 @@
 | OG image doesn't render on social platforms     | Low      | Standard 1200×630px PNG; verify with opengraph.xyz after deploy                                                                 | Pending (user verifies) |
 | `favicon.svg` not supported on older browsers   | Low      | 95%+ coverage; acceptable for V1                                                                                                | Mitigated               |
 | Dynamic `<html lang>` causes hydration mismatch | Low      | Client-side SPA with no SSR; `useEffect` runs after hydration                                                                   | Mitigated               |
-| Asset paths break on GitHub Pages               | Medium   | `base: '/proxy/'` in Vite config handles all path prefixing; assets in `public/` are copied to `dist/` root                     | Mitigated               |
+| Asset paths break on GitHub Pages               | Medium   | `base: '/guia/'` in Vite config handles all path prefixing; assets in `public/` are copied to `dist/` root                      | Mitigated               |
 | README live link temporarily dead before deploy | Low      | Link becomes valid immediately after Actions completes; minimal window of dead link                                             | Accepted                |
 
 ## Generated Tasks

@@ -15,7 +15,7 @@ Phase 4 completed scroll orchestration — the notebook transitions between dist
 However, the page still contains placeholder links and draft-quality content:
 
 - **Template CTAs point to `#`:** the `TemplatesSection` renders 5 template cards with `href="#"` — clicking them does nothing. The page promises "ready-made templates for each stage of the flow" but delivers dead links.
-- **Closing CTA points to a placeholder URL:** `ClosingSection` links to `https://github.com/USERNAME/proxy` — a non-existent repo.
+- **Closing CTA points to a placeholder URL:** `ClosingSection` links to `https://github.com/USERNAME/guia` — a non-existent repo.
 - **No template files exist:** the repo has no `templates/` directory. The 5 templates mentioned (PLAN, ROADMAP, PRD, Rules, Skills) don't exist as downloadable/viewable assets.
 - **Copy is draft quality:** content in `pt.js` and `en.js` was written during Phase 2 as a draft (per pre-requisites P.1/P.2). It has not received a final tone, accuracy, or completeness review.
 
@@ -24,7 +24,7 @@ Without resolving these, the page fails PLAN.md acceptance criteria: "template C
 ## Goals
 
 - **Template assets exist and are accessible:** each of the 5 templates (PLAN, ROADMAP, PRD, Rules, Skills) exists as a `.md` file in the repo, viewable on GitHub.
-- **All CTA links point to real, working URLs:** template buttons link to the corresponding template file on GitHub; closing CTA links to the actual repo (`github.com/baltazarparra/proxy`).
+- **All CTA links point to real, working URLs:** template buttons link to the corresponding template file on GitHub; closing CTA links to the actual repo (`github.com/baltazarparra/guia`).
 - **Copy is publication-ready in both languages:** PT-BR and EN copy reviewed for tone (concise, calm, intelligent, practical), accuracy, completeness, and absence of placeholder text.
 - **Layout accommodates final copy:** any spacing, overflow, or alignment issues introduced by copy changes are resolved.
 
@@ -77,7 +77,7 @@ items: [
   {
     name: 'PLAN',
     description: '...',
-    url: 'https://github.com/baltazarparra/proxy/blob/main/templates/PLAN-TEMPLATE.md',
+    url: 'https://github.com/baltazarparra/guia/blob/main/templates/PLAN-TEMPLATE.md',
   },
   // ...
 ]
@@ -89,7 +89,7 @@ Update `<Button href="#">` to use `item.url` from the content data.
 
 **`ClosingSection.jsx`:**
 
-Replace the placeholder `https://github.com/USERNAME/proxy` with `https://github.com/baltazarparra/proxy`.
+Replace the placeholder `https://github.com/USERNAME/guia` with `https://github.com/baltazarparra/guia`.
 
 ### 3. Final copy review — PT-BR
 
@@ -131,7 +131,7 @@ Templates are plain markdown. They will be viewed on GitHub's markdown renderer.
 
 ### URL construction
 
-Template URLs follow the pattern `https://github.com/baltazarparra/proxy/blob/main/templates/<filename>.md`. These URLs will only resolve after the files are pushed to `main` on GitHub. During local development, the links will 404 — this is expected and acceptable.
+Template URLs follow the pattern `https://github.com/baltazarparra/guia/blob/main/templates/<filename>.md`. These URLs will only resolve after the files are pushed to `main` on GitHub. During local development, the links will 404 — this is expected and acceptable.
 
 ### Content file schema
 
@@ -177,7 +177,7 @@ If copy length changes significantly during the review, GSAP `ScrollTrigger` pos
 - [ ] `templates/` directory exists with 5 `.md` files: PLAN-TEMPLATE, ROADMAP-TEMPLATE, PRD-TEMPLATE, RULES-TEMPLATE, SKILLS-TEMPLATE
 - [ ] Each template is a self-contained, usable starter document with section headings and instructions
 - [ ] Template CTA buttons in `TemplatesSection` link to the correct GitHub URLs (no more `href="#"`)
-- [ ] Closing CTA links to `https://github.com/baltazarparra/proxy`
+- [ ] Closing CTA links to `https://github.com/baltazarparra/guia`
 - [ ] PT-BR copy in `src/content/pt.js` passes tone review (concise, calm, intelligent, practical)
 - [ ] EN copy in `src/content/en.js` passes tone review and matches PT-BR structure
 - [ ] No placeholder text, TODOs, or lorem ipsum in either language
@@ -189,7 +189,7 @@ If copy length changes significantly during the review, GSAP `ScrollTrigger` pos
 ## Dependencies
 
 - Phase 4 complete (all 8 tasks marked done in `IMPLEMENTATION-ROADMAP.md`): scroll orchestration, notebook transitions, DOM animations, and mobile behavior are stable.
-- GitHub repo at `github.com/baltazarparra/proxy` exists and is accessible.
+- GitHub repo at `github.com/baltazarparra/guia` exists and is accessible.
 - Draft copy (from pre-requisites P.1/P.2) exists in `src/content/pt.js` and `src/content/en.js`.
 - Actual project files (PLAN.md, IMPLEMENTATION-ROADMAP.md, AGENTS.md, `.cursor/skills/prd-workflow/template.md`) exist and can inform template creation.
 
@@ -198,6 +198,6 @@ If copy length changes significantly during the review, GSAP `ScrollTrigger` pos
 N/A — all decisions resolved:
 
 - Template strategy: files in this repo under `templates/` (decided by user)
-- GitHub URL: `github.com/baltazarparra/proxy` (confirmed by user)
+- GitHub URL: `github.com/baltazarparra/guia` (confirmed by user)
 - Copy review scope: minor polishing, not structural rewrites (confirmed by user)
 - Template language: EN-only (standard for dev templates, page copy remains bilingual)

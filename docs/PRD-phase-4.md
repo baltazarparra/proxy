@@ -36,7 +36,7 @@ Without section-aware orchestration, the page feels like a static article with a
 
 ## Target Audience
 
-- Visitors scrolling through the Proxy landing page on desktop and mobile browsers.
+- Visitors scrolling through the Guia landing page on desktop and mobile browsers.
 - Developers reading the codebase who need to understand the scroll orchestration architecture.
 
 ## Proposed Solution

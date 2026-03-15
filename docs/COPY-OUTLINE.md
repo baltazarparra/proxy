@@ -1,4 +1,4 @@
-# Copy Outline — Proxy
+# Copy Outline — Guia
 
 **Status:** Final v3
 **Languages:** PT-BR (primary), EN (translation)
@@ -14,7 +14,7 @@
 **title:** Guia prático
 **subtitle:** para desenvolvimento com agentes de código.
 **body:**
-Agentes de código estão mudando a forma como software é construído. Mas sem um fluxo claro, velocidade vira caos. Proxy te guia do zero, da escolha da ferramenta até a entrega, com um método simples que funciona com qualquer agente.
+Agentes de código estão mudando a forma como software é construído. Mas sem um fluxo claro, velocidade vira caos. Guia te guia do zero, da escolha da ferramenta até a entrega, com um método simples que funciona com qualquer agente.
 
 ---
 
@@ -24,51 +24,27 @@ Agentes de código estão mudando a forma como software é construído. Mas sem 
 **body:**
 Agentes de código vêm em dois formatos: dentro de uma IDE ou direto no terminal. Entender a diferença é o primeiro passo.
 
+**lastUpdated:** Março 2026
+**note:** Preços podem mudar. Dá uma olhada nos sites oficiais pra ver os valores atualizados.
+
 **categories:**
 
 **Agentes via IDE**
 Funcionam dentro de um editor de código com interface visual. Você escreve, pede mudanças e vê o resultado no mesmo ambiente. Bem mais fácil pra quem tá começando.
 
-- **Cursor** — IDE baseada no VS Code com agente integrado. Suporta vários modelos (Claude, GPT, Gemini). Tem interface visual com diff, chat e edição inline.
-- **Trae** — IDE da ByteDance com agente embutido. Interface parecida com o VS Code. Foco em acessibilidade e custo baixo.
+- **Cursor** — IDE baseada no VS Code com agente integrado. Suporta vários modelos (Claude, GPT, Gemini). Tem interface visual com diff, chat e edição inline. Planos: Hobby (grátis) · Pro ($20/mês) · Pro+ ($60/mês) · Ultra ($200/mês). Instalar: cursor.com (link).
+- **Trae** — IDE da ByteDance com agente embutido. Interface parecida com o VS Code. Foco em acessibilidade e custo baixo. Planos: Free (grátis) · Pro ($10/mês ou $7.50/mês anual). Instalar: trae.ai (link).
 
 **Agentes via CLI**
 Rodam no terminal, sem interface gráfica. Você conversa com o agente por texto, e ele lê, edita e executa comandos direto no seu projeto. Mais poder e mais controle, mas você precisa ter familiaridade com o terminal.
 
-- **Claude Code** — Agente de terminal da Anthropic. Usa Claude como modelo. Lê o projeto, edita arquivos e executa comandos. Funciona com assinatura Claude ou via API.
-- **Codex** — Agente de terminal da OpenAI. Integrado ao ecossistema ChatGPT. Disponível como CLI, extensão de IDE e app desktop.
-- **OpenCode** — Agente de terminal open-source. Suporta vários provedores (Claude, GPT, Gemini, Ollama). Gratuito, você só precisa das suas próprias chaves de API.
+- **Claude Code** — Agente de terminal da Anthropic. Usa Claude como modelo. Planos: Free · Pro ($20/mês) · Max 5x ($100/mês) · Max 20x ($200/mês) · ou via API. Instalar: `npm install -g @anthropic-ai/claude-code` (link para docs).
+- **Codex** — Agente de terminal da OpenAI. Integrado ao ecossistema ChatGPT. Planos: Incluído no ChatGPT Plus ($20/mês) · Pro ($200/mês) · Business ($25/user/mês). Instalar: `npm install -g @openai/codex` (link para docs).
+- **OpenCode** — Agente de terminal open-source. Suporta vários provedores (Claude, GPT, Gemini, Ollama). Gratuito. Instalar: `brew install opencode-ai/tap/opencode` (link para GitHub).
 
 ---
 
-### Seção 3 — Ferramentas e Preços
-
-**title:** Como começar
-**body:**
-Cada ferramenta tem seu modelo de preço e forma de instalação. Aqui tá o panorama atual pra você escolher a que faz mais sentido.
-
-**lastUpdated:** Março 2026
-
-**ide:**
-
-| Ferramenta | Planos                                                             | Como instalar                                  |
-| ---------- | ------------------------------------------------------------------ | ---------------------------------------------- |
-| Cursor     | Hobby (grátis) · Pro ($20/mês) · Pro+ ($60/mês) · Ultra ($200/mês) | cursor.com, baixe o instalador pro seu sistema |
-| Trae       | Free (grátis) · Pro ($10/mês ou $7.50/mês anual)                   | trae.ai, baixe o instalador pro seu sistema    |
-
-**cli:**
-
-| Ferramenta  | Planos                                                                        | Como instalar                              |
-| ----------- | ----------------------------------------------------------------------------- | ------------------------------------------ |
-| Claude Code | Free · Pro ($20/mês) · Max 5x ($100/mês) · Max 20x ($200/mês) · ou via API    | `npm install -g @anthropic-ai/claude-code` |
-| Codex       | Incluído no ChatGPT Plus ($20/mês) · Pro ($200/mês) · Business ($25/user/mês) | `npm install -g @openai/codex`             |
-| OpenCode    | Gratuito e open-source (precisa das suas próprias chaves de API)              | `brew install opencode-ai/tap/opencode`    |
-
-**note:** Preços podem mudar. Dá uma olhada nos sites oficiais pra ver os valores atualizados.
-
----
-
-### Seção 4 — O Plano Inicial
+### Seção 3 — O Plano Inicial
 
 **title:** Comece com um plano, não com um prompt
 **body:**
@@ -87,7 +63,7 @@ O resultado tem que ser um arquivo markdown sólido que funciona como fonte da v
 
 ---
 
-### Seção 5 — Revisão do Agente e Roadmap
+### Seção 4 — Revisão do Agente e Roadmap
 
 **title:** Deixe o agente revisar e organizar
 **body:**
@@ -106,7 +82,7 @@ O roadmap vira o guia central da execução. Nada é implementado fora dele.
 
 ---
 
-### Seção 6 — Execução Fase a Fase
+### Seção 5 — Execução Fase a Fase
 
 **title:** Execute, valide, avance
 **body:**
@@ -125,7 +101,7 @@ Só avance pra próxima fase depois de validar a atual. Esse ciclo evita acúmul
 
 ---
 
-### Seção 7 — Templates
+### Seção 6 — Templates
 
 **title:** Comece com estrutura, não do zero
 **body:**
@@ -141,7 +117,7 @@ Reunimos templates prontos pra cada etapa do fluxo. Use como ponto de partida: a
 
 ---
 
-### Seção 8 — Fechamento
+### Seção 7 — Fechamento
 
 **title:** Estrutura é velocidade.
 **body:**
@@ -158,7 +134,7 @@ Bom desenvolvimento com agentes não começa com um prompt. Começa com um plano
 **title:** Practical guide
 **subtitle:** to agentic development.
 **body:**
-Code agents are changing how software gets built. But without a clear flow, speed turns into chaos. Proxy walks you through from zero, from picking your tool to shipping, with a simple method that works with any agent.
+Code agents are changing how software gets built. But without a clear flow, speed turns into chaos. Guia walks you through from zero, from picking your tool to shipping, with a simple method that works with any agent.
 
 ---
 
@@ -168,51 +144,27 @@ Code agents are changing how software gets built. But without a clear flow, spee
 **body:**
 Code agents come in two flavors: built into an IDE or running straight from the terminal. Understanding the difference is the first step.
 
+**lastUpdated:** March 2026
+**note:** Prices change. Check the official sites for the latest.
+
 **categories:**
 
 **IDE Agents**
 They work inside a code editor with a visual interface. You write, ask for changes, and see results in the same environment. Way easier if you're just getting started.
 
-- **Cursor** — IDE based on VS Code with an integrated agent. Supports multiple models (Claude, GPT, Gemini). Comes with a visual interface for diffs, chat, and inline editing.
-- **Trae** — ByteDance IDE with a built-in agent. Interface similar to VS Code. Focused on accessibility and low cost.
+- **Cursor** — IDE based on VS Code with an integrated agent. Supports multiple models (Claude, GPT, Gemini). Comes with a visual interface for diffs, chat, and inline editing. Plans: Hobby (free) · Pro ($20/mo) · Pro+ ($60/mo) · Ultra ($200/mo). Install: cursor.com (link).
+- **Trae** — ByteDance IDE with a built-in agent. Interface similar to VS Code. Focused on accessibility and low cost. Plans: Free · Pro ($10/mo or $7.50/mo annual). Install: trae.ai (link).
 
 **CLI Agents**
 Run in the terminal, no graphical interface. You talk to the agent through text, and it reads, edits, and runs commands directly in your project. More power and more control, but you'll need to be comfortable with the terminal.
 
-- **Claude Code** — Anthropic's terminal agent. Uses Claude as the model. Reads your project, edits files, and runs commands. Works with a Claude subscription or via API.
-- **Codex** — OpenAI's terminal agent. Integrated into the ChatGPT ecosystem. Available as CLI, IDE extension, and desktop app.
-- **OpenCode** — Open-source terminal agent. Supports multiple providers (Claude, GPT, Gemini, Ollama). Free, you just use your own API keys.
+- **Claude Code** — Anthropic's terminal agent. Uses Claude as the model. Plans: Free · Pro ($20/mo) · Max 5x ($100/mo) · Max 20x ($200/mo) · or via API. Install: `npm install -g @anthropic-ai/claude-code` (link to docs).
+- **Codex** — OpenAI's terminal agent. Integrated into the ChatGPT ecosystem. Plans: Included in ChatGPT Plus ($20/mo) · Pro ($200/mo) · Business ($25/user/mo). Install: `npm install -g @openai/codex` (link to docs).
+- **OpenCode** — Open-source terminal agent. Supports multiple providers (Claude, GPT, Gemini, Ollama). Free. Install: `brew install opencode-ai/tap/opencode` (link to GitHub).
 
 ---
 
-### Section 3 — Tools and Pricing
-
-**title:** How to get started
-**body:**
-Each tool has its own pricing and installation method. Here's the current landscape so you can pick what makes the most sense for you.
-
-**lastUpdated:** March 2026
-
-**ide:**
-
-| Tool   | Plans                                                         | How to install                                     |
-| ------ | ------------------------------------------------------------- | -------------------------------------------------- |
-| Cursor | Hobby (free) · Pro ($20/mo) · Pro+ ($60/mo) · Ultra ($200/mo) | cursor.com, download the installer for your system |
-| Trae   | Free · Pro ($10/mo or $7.50/mo annual)                        | trae.ai, download the installer for your system    |
-
-**cli:**
-
-| Tool        | Plans                                                                      | How to install                             |
-| ----------- | -------------------------------------------------------------------------- | ------------------------------------------ |
-| Claude Code | Free · Pro ($20/mo) · Max 5x ($100/mo) · Max 20x ($200/mo) · or via API    | `npm install -g @anthropic-ai/claude-code` |
-| Codex       | Included in ChatGPT Plus ($20/mo) · Pro ($200/mo) · Business ($25/user/mo) | `npm install -g @openai/codex`             |
-| OpenCode    | Free and open-source (you just need your own API keys)                     | `brew install opencode-ai/tap/opencode`    |
-
-**note:** Prices can change. Check the official websites for the latest numbers.
-
----
-
-### Section 4 — The Initial Plan
+### Section 3 — The Initial Plan
 
 **title:** Start with a plan, not a prompt
 **body:**
@@ -231,7 +183,7 @@ The result should be a solid markdown file that works as the source of truth for
 
 ---
 
-### Section 5 — Agent Review and Roadmap
+### Section 4 — Agent Review and Roadmap
 
 **title:** Let the agent review and organize
 **body:**
@@ -250,7 +202,7 @@ The roadmap becomes the central guide for execution. Nothing gets built outside 
 
 ---
 
-### Section 6 — Phase-by-Phase Execution
+### Section 5 — Phase-by-Phase Execution
 
 **title:** Execute, validate, advance
 **body:**
@@ -269,7 +221,7 @@ Only move to the next phase after validating the current one. This cycle prevent
 
 ---
 
-### Section 7 — Templates
+### Section 6 — Templates
 
 **title:** Start with structure, not from scratch
 **body:**
@@ -285,7 +237,7 @@ We put together ready-made templates for each stage of the flow. Use them as a s
 
 ---
 
-### Section 8 — Closing
+### Section 7 — Closing
 
 **title:** Structure is speed.
 **body:**

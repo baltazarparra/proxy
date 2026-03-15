@@ -1,18 +1,18 @@
-# Proxy
+# Guia
 
 A restrained, bilingual landing page that explains how to start building software with AI coding agents.
 
-Proxy is not a tool or a framework. It is a single long-form scroll experience that walks the reader through a structured agentic development workflow — from choosing a stack to writing a PRD to executing through pre-implementation plans.
+Guia is not a tool or a framework. It is a single long-form scroll experience that walks the reader through a structured agentic development workflow — from choosing a stack to writing a PRD to executing through pre-implementation plans.
 
 Built with Vite, React, Tailwind CSS, React Three Fiber, and GSAP. Deployed as a static site on GitHub Pages.
 
-**Live site:** [baltazarparra.github.io/proxy](https://baltazarparra.github.io/proxy/)
+**Live site:** [baltazarparra.github.io/guia](https://baltazarparra.github.io/guia/)
 
 ## Why this exists
 
 Most people starting with AI coding agents jump straight into prompting and hope for the best. The result is often fast chaos instead of fast delivery.
 
-Proxy presents a simple, practical workflow that helps beginners build with more structure. It covers stack decisions, planning documents, execution models, and reusable templates — all explained through a calm, editorial scroll experience with a 3D diamond as the central visual metaphor.
+Guia presents a simple, practical workflow that helps beginners build with more structure. It covers stack decisions, planning documents, execution models, and reusable templates — all explained through a calm, editorial scroll experience with a 3D diamond as the central visual metaphor.
 
 ## Stack
 

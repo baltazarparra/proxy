@@ -26,12 +26,12 @@ describe('smoke tests', () => {
       'hero',
       'agents',
       'models',
-      'tools',
       'plan',
       'roadmap',
       'execution',
       'bootstrap',
       'templates',
+      'glossary',
       'closing',
     ]
 

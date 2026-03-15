@@ -1,4 +1,4 @@
-# Implementation Roadmap — Proxy
+# Implementation Roadmap — Guia
 
 **Reference:** [PLAN.md](PLAN.md)
 **Stack:** Vite + React + JavaScript + Tailwind CSS + React Three Fiber + Drei + GSAP + GitHub Pages
@@ -78,7 +78,7 @@ These must be resolved before Phase 1 begins. No code should be written until al
   - Done: a Tailwind utility class (e.g. `text-red-500`) renders correctly in the browser
 
 - [x] **1.3**: Configure Vite for GitHub Pages
-  - Set `base` in `vite.config.js` to handle the repo-based path (e.g. `/proxy/`)
+  - Set `base` in `vite.config.js` to handle the repo-based path (e.g. `/guia/`)
   - Verify static asset paths resolve correctly after build
   - Files modified: `vite.config.js`
   - Done: `npm run build` produces a `dist/` folder with correct asset paths
@@ -202,7 +202,7 @@ Before moving to Phase 2, verify:
 
 - [x] **2.5**: Build `HeroSection`
   - Full-viewport height hero
-  - Displays: project name "Proxy", one-line framing, supporting statement
+  - Displays: project name "Guia", one-line framing, supporting statement
   - Subtle scroll cue (arrow or text hint)
   - Uses `SectionHeading` and `CopyBlock`
   - Reads copy from language context
@@ -580,7 +580,7 @@ Before moving to Phase 5, verify:
   - Update `ClosingSection` CTA to point to the GitHub repository
   - Files modified: `src/content/pt.js`, `src/content/en.js`, or section components
   - Done: all CTA buttons link to real, accessible URLs
-  - **Result:** Added `url` field to template items in `pt.js` and `en.js`; `TemplatesSection` uses `item.url`; `ClosingSection` links to `https://github.com/baltazarparra/proxy`
+  - **Result:** Added `url` field to template items in `pt.js` and `en.js`; `TemplatesSection` uses `item.url`; `ClosingSection` links to `https://github.com/baltazarparra/guia`
 
 - [x] **5.3**: Final copy review — PT-BR
   - Read through all 8 sections in PT-BR in the deployed page
@@ -768,11 +768,11 @@ Before moving to Phase 7, verify:
 
 - [x] **7.3**: Create social sharing image
   - Create a 1200x630px image for Open Graph
-  - Design: simple branded card with "Proxy" name and tagline
+  - Design: simple branded card with "Guia" name and tagline
   - Place in `public/og-image.png` (or similar)
   - Update `og:image` meta tag in `index.html` with the production URL
   - Done: image exists and meta tag points to the correct URL
-  - **Result:** Created `public/og-image.png` (1200x630px, dark background with "Proxy" title and PT-BR tagline). Fixed `og:url` and `og:image` meta tags (replaced `USERNAME` with `baltazarparra`). Added `<link rel="canonical">`. Created `public/favicon.svg` (minimal notebook icon with accent color)
+  - **Result:** Created `public/og-image.png` (1200x630px, dark background with "Guia" title and PT-BR tagline). Fixed `og:url` and `og:image` meta tags (replaced `USERNAME` with `baltazarparra`). Added `<link rel="canonical">`. Created `public/favicon.svg` (minimal notebook icon with accent color)
 
 - [ ] **7.4**: Verify OG tags
   - Use [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) or [OpenGraph.xyz](https://www.opengraph.xyz/)
@@ -781,7 +781,7 @@ Before moving to Phase 7, verify:
   - Done: sharing preview looks correct
 
 - [x] **7.5**: Update README
-  - Add project description (what Proxy is, who it's for)
+  - Add project description (what Guia is, who it's for)
   - Add local development instructions (`npm install`, `npm run dev`)
   - Add build and deploy instructions
   - Add link to the live site

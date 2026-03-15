@@ -4,6 +4,7 @@ import useSectionReveal from '../../hooks/useSectionReveal'
 import SectionContainer from '../layout/SectionContainer'
 import SectionHeading from '../ui/SectionHeading'
 import CopyBlock from '../ui/CopyBlock'
+import Modal from '../ui/Modal'
 
 /**
  * @param {{ filter: { id: string, label: string }, isActive: boolean, onClick: () => void }} props
@@ -22,75 +23,33 @@ function FilterPill({ filter, isActive, onClick }) {
 }
 
 /**
- * @param {{ model: import('../../content/pt').default['models']['items'][0], isExpanded: boolean, onToggle: () => void, index: number, isVisible: boolean }} props
+ * @param {{ model: import('../../content/pt').default['models']['items'][0], onClick: () => void, index: number }} props
  */
-function ModelCard({ model, isExpanded, onToggle, index, isVisible }) {
+function ModelCard({ model, onClick, index }) {
   return (
     <div
-      className={`bg-surface cursor-pointer rounded-lg border transition-all duration-300 ${
-        isExpanded
-          ? 'border-accent/40 shadow-[0_0_20px_rgba(201,168,76,0.08)]'
-          : 'border-accent/10 hover:border-accent/30 hover:shadow-[0_0_15px_rgba(201,168,76,0.05)]'
-      } ${isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'}`}
-      style={{ transitionDelay: isVisible ? `${index * 50}ms` : '0ms' }}
-      onClick={onToggle}
+      className="bg-surface border-accent/10 hover:border-accent/30 translate-y-0 cursor-pointer rounded-lg border opacity-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(201,168,76,0.05)]"
+      style={{ transitionDelay: `${index * 50}ms` }}
+      onClick={onClick}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault()
-          onToggle()
+          onClick()
         }
       }}
       role="button"
-      tabIndex={isVisible ? 0 : -1}
-      aria-expanded={isExpanded}
+      tabIndex={0}
     >
       <div className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-3">
-          <p className="text-accent min-w-0 text-lg font-semibold">{model.name}</p>
+          <p className="text-accent min-w-0 text-lg font-semibold text-shadow-[var(--text-shadow-heading)]">
+            {model.name}
+          </p>
           <span className="text-muted bg-background shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium">
             {model.costLabel}
           </span>
         </div>
         <p className="text-muted mt-2 text-sm leading-relaxed">{model.description}</p>
-      </div>
-
-      <div
-        className="grid transition-[grid-template-rows] duration-300 ease-out"
-        style={{ gridTemplateRows: isExpanded ? '1fr' : '0fr' }}
-      >
-        <div className="overflow-hidden">
-          <div className="border-accent/10 border-t px-4 pt-4 pb-4 md:px-5 md:pb-5">
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs">
-              <span className="text-muted">
-                <span className="text-foreground font-medium">{model.pricing}</span>
-              </span>
-              <span className="text-muted">
-                Contexto: <span className="text-foreground font-medium">{model.context}</span>
-              </span>
-            </div>
-
-            <div className="mt-3">
-              <div className="flex flex-wrap gap-1.5">
-                {model.strengths.map((s) => (
-                  <span
-                    key={s}
-                    className="bg-accent/10 text-accent rounded px-2 py-0.5 text-xs font-medium"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {model.availableIn.map((tool) => (
-                <span key={tool} className="bg-background text-muted rounded px-2 py-0.5 text-xs">
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )
@@ -102,24 +61,30 @@ export default function ModelsSection() {
   useSectionReveal(revealRef)
 
   const [activeFilter, setActiveFilter] = useState('all')
-  const [expandedModel, setExpandedModel] = useState(/** @type {string | null} */ (null))
+  const [openModel, setOpenModel] = useState(
+    /** @type {typeof import('../../content/pt').default.models.items[0] | null} */ (null),
+  )
 
   const handleFilterChange = useCallback(
     /** @param {string} filterId */
     (filterId) => {
       setActiveFilter(filterId)
-      setExpandedModel(null)
+      setOpenModel(null)
     },
     [],
   )
 
-  const handleToggleModel = useCallback(
-    /** @param {string} modelName */
-    (modelName) => {
-      setExpandedModel((prev) => (prev === modelName ? null : modelName))
+  const handleOpenModel = useCallback(
+    /** @param {typeof import('../../content/pt').default.models.items[0]} model */
+    (model) => {
+      setOpenModel(model)
     },
     [],
   )
+
+  const handleCloseModal = useCallback(() => {
+    setOpenModel(null)
+  }, [])
 
   const filteredItems = t.models.items.filter(
     (item) => activeFilter === 'all' || item.family === activeFilter,
@@ -145,26 +110,80 @@ export default function ModelsSection() {
         </div>
 
         <div className="gap-content mt-6 grid md:grid-cols-2">
-          {t.models.items.map((model, i) => {
-            const isVisible = filteredItems.includes(model)
-            const visibleIndex = filteredItems.indexOf(model)
-            return (
-              <ModelCard
-                key={model.name}
-                model={model}
-                isExpanded={expandedModel === model.name}
-                onToggle={() => handleToggleModel(model.name)}
-                index={isVisible ? visibleIndex : i}
-                isVisible={isVisible}
-              />
-            )
-          })}
+          {filteredItems.map((model, i) => (
+            <ModelCard
+              key={model.name}
+              model={model}
+              onClick={() => handleOpenModel(model)}
+              index={i}
+            />
+          ))}
         </div>
 
         <p className="text-muted mt-8 text-sm">
           {t.models.lastUpdated} — {t.models.note}
         </p>
       </div>
+
+      <Modal
+        isOpen={!!openModel}
+        onClose={handleCloseModal}
+        title={openModel?.name ?? ''}
+        closeLabel={t.modal?.closeLabel}
+      >
+        {openModel && (
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="text-muted bg-background rounded-full px-2.5 py-0.5 text-xs font-medium">
+                {openModel.costLabel}
+              </span>
+            </div>
+
+            <p className="text-muted text-sm leading-relaxed">{openModel.description}</p>
+
+            {openModel.modalContent?.extendedDescription && (
+              <p className="text-foreground border-accent/20 border-l-2 pl-4 text-sm">
+                {openModel.modalContent.extendedDescription}
+              </p>
+            )}
+
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs">
+              <span className="text-muted">
+                <span className="text-foreground font-medium">{openModel.pricing}</span>
+              </span>
+              <span className="text-muted">
+                {t.modal?.contextLabel}{' '}
+                <span className="text-foreground font-medium">{openModel.context}</span>
+              </span>
+            </div>
+
+            <div>
+              <p className="text-muted mb-1.5 text-xs font-medium">{t.modal?.strengthsLabel}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {openModel.strengths.map((s) => (
+                  <span
+                    key={s}
+                    className="bg-accent/10 text-accent rounded px-2 py-0.5 text-xs font-medium"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-muted mb-1.5 text-xs font-medium">{t.modal?.availableInLabel}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {openModel.availableIn.map((tool) => (
+                  <span key={tool} className="bg-background text-muted rounded px-2 py-0.5 text-xs">
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </Modal>
     </SectionContainer>
   )
 }

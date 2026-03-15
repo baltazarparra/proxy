@@ -62,7 +62,7 @@ Key data transformations from `docs/COPY-OUTLINE.md`:
 - React context (`LanguageContext`) + provider (`LanguageProvider`) + hook (`useLanguage`)
 - Returns `{ lang, setLang, t }` where `t` is the current language's copy object
 - Default language: `pt`
-- Persists choice in `localStorage` (key: `proxy-lang`)
+- Persists choice in `localStorage` (key: `guia-lang`)
 - Updates `document.documentElement.lang` to `"pt-BR"` or `"en"` on change
 - Both copy files imported statically (no dynamic import)
 
@@ -113,7 +113,7 @@ Three reusable components enforcing the design system:
 | Language toggle switches all text         | Pass — clicking EN switches all section titles, body text, tool descriptions, CTAs to English. Back to PT restores Portuguese |
 | Language toggle preserves scroll position | Pass — toggling at bottom of page stays at bottom                                                                             |
 | `<html lang>` updates on toggle           | Pass — changes between `pt-BR` and `en`                                                                                       |
-| Language persists in localStorage         | Pass — key `proxy-lang` stored                                                                                                |
+| Language persists in localStorage         | Pass — key `guia-lang` stored                                                                                                 |
 | Page is responsive at 375px               | Pass — no horizontal overflow, text readable, single-column layout                                                            |
 | Page is responsive at 1280px              | Pass — multi-column grids for agents, tools, templates                                                                        |
 | Semantic HTML                             | Pass — `<h1>` (hero), `<h2>` (sections), `<h3>` (subcategories), `<section>`, `<ol>`, `<li>`, `<button>`, `<a>`               |

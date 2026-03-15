@@ -1,4 +1,4 @@
-# PRD Report — Proxy Landing Page
+# PRD Report — Guia Landing Page
 
 ## PRD Reference
 

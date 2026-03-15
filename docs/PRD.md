@@ -1,4 +1,4 @@
-# PRD — Proxy Landing Page
+# PRD — Guia Landing Page
 
 ## Metadata
 
@@ -49,7 +49,7 @@ A single-page, long-form, scroll-driven editorial landing page built around a ce
 
 The page guides the visitor through 8 sections that teach a concrete agentic development workflow:
 
-1. **Hero** — establishes concept and visual identity ("Proxy")
+1. **Hero** — establishes concept and visual identity ("Guia")
 2. **Code Agents: IDE vs CLI** — explains the two modes of working with agents (Cursor/Trae vs Claude Code/Codex/OpenCode), what each is, and when to use them
 3. **Tools and Pricing** — current subscription pricing, plan tiers, and installation instructions for each tool
 4. **The Initial Plan** — how to create a PLAN.md using any LLM before touching the code agent

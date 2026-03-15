@@ -86,7 +86,7 @@ All design tokens are configured via a single file: `src/styles/globals.css`, us
 
 ### Deployment Pipeline (1.3, 1.4)
 
-**Vite config:** `base: '/proxy/'` ensures all asset paths in the production build are prefixed with `/proxy/` for GitHub Pages subdirectory hosting. Verified by inspecting `dist/index.html` after build — JS, CSS, and favicon paths all use `/proxy/assets/...`.
+**Vite config:** `base: '/guia/'` ensures all asset paths in the production build are prefixed with `/guia/` for GitHub Pages subdirectory hosting. Verified by inspecting `dist/index.html` after build — JS, CSS, and favicon paths all use `/guia/assets/...`.
 
 **GitHub Actions workflow:** `.github/workflows/deploy.yml` triggers on push to `main`. Uses Node 20 with npm cache, runs `npm ci` + `npm run build`, then deploys via `actions/configure-pages` + `actions/upload-pages-artifact` + `actions/deploy-pages`. Permissions set for `pages: write` and `id-token: write`. Concurrency group prevents parallel deploys.
 
@@ -99,7 +99,7 @@ All design tokens are configured via a single file: `src/styles/globals.css`, us
 - `<meta name="description">` with project summary
 - `<meta name="viewport">` with standard responsive settings
 - Open Graph tags: `og:title`, `og:description`, `og:type=website`, `og:url`, `og:image`
-- Favicon placeholder: `<link rel="icon" type="image/svg+xml" href="/proxy/favicon.svg">`
+- Favicon placeholder: `<link rel="icon" type="image/svg+xml" href="/guia/favicon.svg">`
 
 **Note:** `og:url` and `og:image` use `USERNAME.github.io` as a placeholder. Must be replaced with the actual GitHub username before deployment.
 

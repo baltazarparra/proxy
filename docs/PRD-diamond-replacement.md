@@ -12,7 +12,7 @@
 
 O modelo 3D atual (notebook) foi concebido como metáfora de "construção estruturada" no PLAN.md original. A decisão de substituí-lo por um diamante negro visa:
 
-1. **Identidade visual distinta** — o diamante transmite valor, precisão e refinamento, alinhado à proposta de qualidade e estrutura do Proxy
+1. **Identidade visual distinta** — o diamante transmite valor, precisão e refinamento, alinhado à proposta de qualidade e estrutura do Guia
 2. **Impacto visual superior** — a referência mostra um objeto com forte presença: preto profundo, reflexos nítidos e refração que cria brilho interno
 3. **Coerência com o tema escuro** — o diamante negro se integra naturalmente ao fundo `#0c0c0e` e aos acentos dourados existentes
 
@@ -41,7 +41,7 @@ Se não for feito, a página mantém o notebook como elemento central, perdendo 
 
 ## Target Audience
 
-Os mesmos usuários do Proxy: desenvolvedores interessados em desenvolvimento agentic, tech leads, builders. A mudança é puramente visual — o diamante reforça a sensação de premium e precisão sem alterar a mensagem.
+Os mesmos usuários do Guia: desenvolvedores interessados em desenvolvimento agentic, tech leads, builders. A mudança é puramente visual — o diamante reforça a sensação de premium e precisão sem alterar a mensagem.
 
 ## Proposed Solution
 

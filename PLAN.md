@@ -1,8 +1,8 @@
-# PLAN.md — Proxy Landing Page
+# PLAN.md — Guia Landing Page
 
 ## 1. Project Overview
 
-**Project name:** Proxy  
+**Project name:** Guia  
 **Type:** Experimental single-page landing page  
 **Primary goal:** Educate people who never used code agents and explain a simple agentic development flow  
 **Secondary goal:** Offer reusable templates and a clean mental model for getting started  
@@ -10,7 +10,7 @@
 **Languages:** PT-BR and EN  
 **Deployment:** GitHub Pages
 
-Proxy should feel like a creative editorial product site. The experience should be elegant, minimal, calm, and highly intentional. The visual inspiration is a mix of Linear-like product clarity, Untold-like storytelling, and Apple-like restraint.
+Guia should feel like a creative editorial product site. The experience should be elegant, minimal, calm, and highly intentional. The visual inspiration is a mix of Linear-like product clarity, Untold-like storytelling, and Apple-like restraint.
 
 ## 2. Product Intent
 
@@ -262,7 +262,7 @@ Goal: establish concept and visual identity.
 
 Content direction:
 
-- name: Proxy
+- name: Guia
 - subtitle: a practical guide to agentic development
 - short body: code agents are changing software, but speed without structure is chaos
 - visual entry of the 3D notebook
@@ -538,7 +538,7 @@ Because this is a single-page experience, the architecture should remain lean.
 Suggested top-level structure:
 
 ```text
-proxy/
+guia/
   public/
     models/
     textures/
@@ -1042,7 +1042,7 @@ All other concerns (visual direction, implementation steps, template specs) are 
 
 ## 32. Final Recommendation
 
-Build Proxy as a restrained, bilingual, static, scroll-led creative landing page using Vite, React, Tailwind, React Three Fiber, Drei, and GSAP.
+Build Guia as a restrained, bilingual, static, scroll-led creative landing page using Vite, React, Tailwind, React Three Fiber, Drei, and GSAP.
 
 Keep the first version focused.
 Do not let the 3D system dominate the product message.

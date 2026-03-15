@@ -127,7 +127,7 @@ const progress = useScrollStore((s) => s.scrollProgress)
 
 ### HeroSection `<h1>` missing
 
-The quality gate report noted that `HeroSection` doesn't render `t.hero.title` ("Proxy") in an `<h1>`. This appears to have been removed in a prior session. This is a semantic HTML issue (the page currently has no `<h1>`). It should be fixed — either in this phase during integration (3.12) or flagged explicitly for Phase 5 copy review. Not blocking for Phase 3, but worth tracking.
+The quality gate report noted that `HeroSection` doesn't render `t.hero.title` ("Guia") in an `<h1>`. This appears to have been removed in a prior session. This is a semantic HTML issue (the page currently has no `<h1>`). It should be fixed — either in this phase during integration (3.12) or flagged explicitly for Phase 5 copy review. Not blocking for Phase 3, but worth tracking.
 
 ### Test strategy
 

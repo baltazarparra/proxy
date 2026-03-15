@@ -3,7 +3,7 @@ import pt from '../content/pt'
 import en from '../content/en'
 
 const copies = { pt, en }
-const STORAGE_KEY = 'proxy-lang'
+const STORAGE_KEY = 'guia-lang'
 
 const LanguageContext = createContext(null)
 

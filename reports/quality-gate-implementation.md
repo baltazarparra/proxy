@@ -173,7 +173,7 @@ Bundle size (67.51 kB gzipped JS) is well within the 300 kB budget.
 
 2. **`strict: false` in jsconfig.json**: type-checking starts permissive. Files without JSDoc annotations are checked leniently. This can be tightened incrementally as JSDoc coverage expands in future phases.
 
-3. **HeroSection missing `<h1>` title**: the component renders `t.hero.subtitle` and `t.hero.body` but not `t.hero.title` ("Proxy"). This appears to have been removed in a prior session and is unrelated to the quality gate work. The smoke test was adapted to match the actual component.
+3. **HeroSection missing `<h1>` title**: the component renders `t.hero.subtitle` and `t.hero.body` but not `t.hero.title` ("Guia"). This appears to have been removed in a prior session and is unrelated to the quality gate work. The smoke test was adapted to match the actual component.
 
 ## Next Steps
 

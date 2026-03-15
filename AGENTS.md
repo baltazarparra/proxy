@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Proxy is a static single-page landing page that explains agentic development to beginners. It is a long-form, scroll-driven editorial experience with a 3D diamond as the central visual element. Bilingual: PT-BR and EN. Deployed to GitHub Pages.
+Guia is a static single-page landing page that explains agentic development to beginners. It is a long-form, scroll-driven editorial experience with a 3D diamond as the central visual element. Bilingual: PT-BR and EN. Deployed to GitHub Pages.
 
 Full product spec: `PLAN.md`
 Task-level execution guide: `IMPLEMENTATION-ROADMAP.md`
@@ -178,7 +178,7 @@ GitHub Pages via GitHub Actions. Workflow at `.github/workflows/deploy.yml`.
 
 - Triggers on push to `main`
 - Builds static bundle and publishes to Pages
-- Vite `base` config must match the repo path (e.g. `/proxy/`)
+- Vite `base` config must match the repo path (e.g. `/guia/`)
 - SEO: `<title>`, `<meta description>`, Open Graph tags, favicon, `<html lang>` attribute
 
 ## Validation after changes

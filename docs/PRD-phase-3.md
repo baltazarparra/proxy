@@ -10,7 +10,7 @@
 
 ## Problem Statement
 
-The page is fully readable with all 8 bilingual sections, but it is visually static — just text, cards, and buttons on a white background. The central metaphor of the project is a 3D notebook that evolves as the visitor scrolls through the workflow, reinforcing the narrative of structured development. Without it, the page lacks the editorial polish and visual engagement that differentiates Proxy from a plain blog post or documentation page.
+The page is fully readable with all 8 bilingual sections, but it is visually static — just text, cards, and buttons on a white background. The central metaphor of the project is a 3D notebook that evolves as the visitor scrolls through the workflow, reinforcing the narrative of structured development. Without it, the page lacks the editorial polish and visual engagement that differentiates Guia from a plain blog post or documentation page.
 
 Phase 3 must establish the 3D foundation: validate the integration pattern between R3F (WebGL render loop) and GSAP (DOM scroll), build the notebook model with procedural geometry, wire basic scroll-driven rotation, and ensure the experience degrades gracefully on mobile and when WebGL is unavailable.
 
@@ -164,7 +164,7 @@ All new files must pass `npm run check` (lint, format, typecheck, tests). New co
 
 ### Known issue to address
 
-The quality gate report (QG report, known limitation #3) notes that `HeroSection` is missing the `<h1>` title rendering (`t.hero.title` = "Proxy"). This was removed in a prior session. It should be restored as part of this phase or flagged for Phase 5 copy review.
+The quality gate report (QG report, known limitation #3) notes that `HeroSection` is missing the `<h1>` title rendering (`t.hero.title` = "Guia"). This was removed in a prior session. It should be restored as part of this phase or flagged for Phase 5 copy review.
 
 ## Scope
 

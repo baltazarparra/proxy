@@ -132,7 +132,7 @@ The `agents` section has `categories` — an array of two objects (IDE, CLI), ea
 - Must not trigger a re-mount of the entire component tree (context value change, not provider swap)
 - Must not reset scroll position
 - Must update `document.documentElement.lang` to `"pt-BR"` or `"en"`
-- `localStorage` key: `"proxy-lang"`
+- `localStorage` key: `"guia-lang"`
 
 ### Hero section specifics
 

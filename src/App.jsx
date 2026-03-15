@@ -4,7 +4,6 @@ import LanguageToggle from './components/layout/LanguageToggle'
 import HeroSection from './components/sections/HeroSection'
 import AgentsSection from './components/sections/AgentsSection'
 import ModelsSection from './components/sections/ModelsSection'
-import ToolsSection from './components/sections/ToolsSection'
 import PlanSection from './components/sections/PlanSection'
 import RoadmapSection from './components/sections/RoadmapSection'
 import ExecutionSection from './components/sections/ExecutionSection'
@@ -21,7 +20,6 @@ export default function App() {
         <HeroSection />
         <AgentsSection />
         <ModelsSection />
-        <ToolsSection />
         <PlanSection />
         <RoadmapSection />
         <ExecutionSection />

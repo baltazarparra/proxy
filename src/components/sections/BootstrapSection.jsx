@@ -5,7 +5,7 @@ import SectionContainer from '../layout/SectionContainer'
 import SectionHeading from '../ui/SectionHeading'
 import CopyBlock from '../ui/CopyBlock'
 
-const LLMS_URL = 'https://baltazarparra.github.io/proxy/llms.txt'
+const LLMS_URL = 'https://baltazarparra.github.io/guia/llms.txt'
 
 export default function BootstrapSection() {
   const { t } = useLanguage()

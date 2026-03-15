@@ -23,7 +23,7 @@ If these gaps are not addressed, the page either fails to deploy, presents broke
 
 ## Goals
 
-- Deploy the Proxy landing page to GitHub Pages with zero broken links and correct asset paths
+- Deploy the Guia landing page to GitHub Pages with zero broken links and correct asset paths
 - Ensure social sharing previews (Open Graph) display correctly with a branded image
 - Dynamically update `<html lang>` when the language toggle is used
 - Provide a complete, accurate README for visitors and contributors
@@ -49,9 +49,9 @@ If these gaps are not addressed, the page either fails to deploy, presents broke
 
 Replace `USERNAME` placeholder in `index.html` with `baltazarparra`:
 
-- `og:url` → `https://baltazarparra.github.io/proxy/`
-- `og:image` → `https://baltazarparra.github.io/proxy/og-image.png`
-- Add `<link rel="canonical" href="https://baltazarparra.github.io/proxy/" />`
+- `og:url` → `https://baltazarparra.github.io/guia/`
+- `og:image` → `https://baltazarparra.github.io/guia/og-image.png`
+- Add `<link rel="canonical" href="https://baltazarparra.github.io/guia/" />`
 
 ### 7.2 — Dynamic `<html lang>` attribute
 
@@ -68,14 +68,14 @@ Generate a simple SVG favicon and place it at `public/favicon.svg`. Design: a mi
 
 ### 7.4 — Create social sharing image
 
-Generate a 1200×630px PNG for Open Graph. Design: simple branded card with "Proxy" title and the PT-BR tagline on the project's dark background color, using the Inter font family. Place at `public/og-image.png`.
+Generate a 1200×630px PNG for Open Graph. Design: simple branded card with "Guia" title and the PT-BR tagline on the project's dark background color, using the Inter font family. Place at `public/og-image.png`.
 
 ### 7.5 — Update README
 
 Replace the "Planning phase" status with current reality:
 
 - Project status: Phase 7 (deployment)
-- Add live site link: `https://baltazarparra.github.io/proxy/`
+- Add live site link: `https://baltazarparra.github.io/guia/`
 - Update development commands (include `npm run check`)
 - Remove "No application code has been written yet"
 - Update project structure to match actual file tree
@@ -87,7 +87,7 @@ The workflow at `.github/workflows/deploy.yml` runs lint, format check, typechec
 
 1. Push latest code to `main`
 2. Monitor the Actions tab for workflow success
-3. Verify the built site appears at `https://baltazarparra.github.io/proxy/`
+3. Verify the built site appears at `https://baltazarparra.github.io/guia/`
 
 This task is documented-only — the user will execute git operations manually.
 
@@ -124,7 +124,7 @@ Walk through every item in PLAN.md section 29 and verify against the production 
 
 ## Technical Considerations
 
-- **Vite `base` path**: already configured as `/proxy/` in `vite.config.js` — matches GitHub Pages repo URL pattern
+- **Vite `base` path**: already configured as `/guia/` in `vite.config.js` — matches GitHub Pages repo URL pattern
 - **GitHub Pages deployment**: uses `actions/deploy-pages@v4` with artifact upload from `dist/` — standard and stable
 - **`<html lang>` mutation**: direct DOM manipulation via `document.documentElement.lang` is the standard approach for SPAs; React doesn't control the `<html>` element
 - **OG image dimensions**: 1200×630px is the standard for Facebook/Twitter/LinkedIn previews
@@ -156,14 +156,14 @@ Walk through every item in PLAN.md section 29 and verify against the production 
 
 ## Risks and Mitigations
 
-| Risk                                            | Severity | Mitigation                                                                                                                            |
-| ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| GitHub Actions workflow fails on first push     | Medium   | Workflow already passes `npm run check` locally; CI environment matches (Node 20, ubuntu-latest). User can debug from Actions logs    |
-| OG image doesn't render on social platforms     | Low      | Standard 1200×630px PNG format; verify with opengraph.xyz after deploy                                                                |
-| `favicon.svg` not supported on older browsers   | Low      | SVG favicon coverage is 95%+; acceptable for V1. Can add `.ico` fallback later                                                        |
-| Dynamic `<html lang>` causes hydration mismatch | Low      | We're using client-side SPA (no SSR); `document.documentElement.lang` is set in `useEffect`, which runs after hydration               |
-| README live link is broken before first deploy  | Low      | Link is added to README before deploy; becomes valid once Actions completes                                                           |
-| Asset paths break on GitHub Pages               | Medium   | `base: '/proxy/'` already handles path prefixing; `og-image.png` and `favicon.svg` are in `public/` which Vite copies to `dist/` root |
+| Risk                                            | Severity | Mitigation                                                                                                                           |
+| ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| GitHub Actions workflow fails on first push     | Medium   | Workflow already passes `npm run check` locally; CI environment matches (Node 20, ubuntu-latest). User can debug from Actions logs   |
+| OG image doesn't render on social platforms     | Low      | Standard 1200×630px PNG format; verify with opengraph.xyz after deploy                                                               |
+| `favicon.svg` not supported on older browsers   | Low      | SVG favicon coverage is 95%+; acceptable for V1. Can add `.ico` fallback later                                                       |
+| Dynamic `<html lang>` causes hydration mismatch | Low      | We're using client-side SPA (no SSR); `document.documentElement.lang` is set in `useEffect`, which runs after hydration              |
+| README live link is broken before first deploy  | Low      | Link is added to README before deploy; becomes valid once Actions completes                                                          |
+| Asset paths break on GitHub Pages               | Medium   | `base: '/guia/'` already handles path prefixing; `og-image.png` and `favicon.svg` are in `public/` which Vite copies to `dist/` root |
 
 ## Success Criteria
 
