@@ -28,7 +28,7 @@ const DiamondModel = forwardRef(function DiamondModel(props, ref) {
             ior={2.42}
             attenuationColor={ATTENUATION_COLOR}
             attenuationDistance={0.8}
-            envMapIntensity={1.4}
+            envMapIntensity={0.9}
           />
         )}
       </mesh>

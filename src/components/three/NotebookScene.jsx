@@ -34,10 +34,10 @@ export default function NotebookScene() {
             {!shouldSimplify && (
               <EffectComposer>
                 <Bloom
-                  luminanceThreshold={0.45}
+                  luminanceThreshold={0.55}
                   luminanceSmoothing={0.9}
-                  intensity={0.5}
-                  radius={0.8}
+                  intensity={0.25}
+                  radius={0.4}
                 />
               </EffectComposer>
             )}

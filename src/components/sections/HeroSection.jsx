@@ -31,6 +31,7 @@ export default function HeroSection() {
             <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+            <span className="text-foreground ml-2 text-sm font-bold">{t.hero.tabLabel}</span>
           </div>
 
           <div className="flex items-start gap-3 p-4 md:p-5">

@@ -1,7 +1,8 @@
 export default {
   hero: {
     title: 'Guia prático',
-    subtitle: 'pra programar com agentes.',
+    subtitle: 'para programar com agentes.',
+    tabLabel: 'prompt para começar',
     prompt:
       'Leia o conteúdo de https://baltazarparra.github.io/proxy/llms.txt e siga as instruções para me guiar na criação de um novo projeto de software.',
     copiedLabel: 'Copiado!',

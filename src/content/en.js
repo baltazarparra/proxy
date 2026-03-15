@@ -2,6 +2,7 @@ export default {
   hero: {
     title: 'Practical guide',
     subtitle: 'to coding with agents.',
+    tabLabel: 'prompt to get started',
     prompt:
       'Read the contents of https://baltazarparra.github.io/proxy/llms.txt and follow the instructions to guide me through creating a new software project.',
     copiedLabel: 'Copied!',
