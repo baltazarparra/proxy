@@ -2,7 +2,7 @@
 
 A restrained, bilingual landing page that explains how to start building software with AI coding agents.
 
-gu**ia** is not a tool or a framework. It is a single long-form scroll experience that walks the reader through a structured agentic development workflow — from choosing a stack to writing a PRD to executing through pre-implementation plans.
+gu**ia** is not a tool or a framework. It is a public guide plus a set of agent-friendly artifacts that walk the reader through a structured development workflow, from choosing a stack to writing a PRD to executing through pre-implementation plans.
 
 Built with Vite, React, Tailwind CSS, React Three Fiber, and GSAP. Deployed as a static site on GitHub Pages.
 
@@ -12,7 +12,7 @@ Built with Vite, React, Tailwind CSS, React Three Fiber, and GSAP. Deployed as a
 
 Most people starting with AI coding agents jump straight into prompting and hope for the best. The result is often fast chaos instead of fast delivery.
 
-gu**ia** presents a simple, practical workflow that helps beginners build with more structure. It covers stack decisions, planning documents, execution models, and reusable templates — all explained through a calm, editorial scroll experience with a 3D diamond as the central visual metaphor.
+gu**ia** presents a simple, practical workflow that helps beginners build with more structure. It covers stack decisions, planning documents, execution models, reusable templates, and direct entrypoints for code agents.
 
 ## Stack
 
@@ -31,6 +31,9 @@ gu**ia** presents a simple, practical workflow that helps beginners build with m
 | Use case                    | What to read                                                                                                                                                                         |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Bootstrap a new project** | [llms.txt](https://baltazarparra.github.io/guia/llms.txt) — paste this URL into your agent. It will interview the user and create PLAN.md, IMPLEMENTATION-ROADMAP.md, and AGENTS.md. |
+| Need a static overview      | [start-here.md](https://baltazarparra.github.io/guia/start-here.md) — lightweight guide for humans or agents that only got the home URL or cannot render the SPA.                    |
+| Need a machine index        | [agent-index.json](https://baltazarparra.github.io/guia/agent-index.json) — machine-readable map of public entrypoints, templates, examples, and repo docs.                          |
+| Need filled examples        | [examples/README.md](examples/README.md) — sample outputs of PLAN.md, roadmap, and AGENTS.md.                                                                                        |
 | Contribute to gu**ia**      | [AGENTS.md](AGENTS.md) — project rules, constraints, and validation workflow.                                                                                                        |
 
 ## Local development
@@ -63,22 +66,23 @@ npm run format   # auto-format all files
 src/
   components/
     layout/       PageShell, SectionContainer, LanguageToggle
-    sections/     HeroSection, AgentsSection, ModelsSection, ToolsSection,
-                  PlanSection, RoadmapSection, ExecutionSection,
-                  BootstrapSection, TemplatesSection, GlossarySection, ClosingSection
-    ui/           Button, Pill, SectionHeading, CopyBlock, Modal
+    sections/     HeroSection, GlossarySection, AgentsSection, ModesSection,
+                  ModelsSection, PlanSection, RoadmapSection, ExecutionSection,
+                  BootstrapSection, TemplatesSection, ClosingSection, DipCtaSection
+    ui/           Button, SectionHeading, CopyBlock, Modal, Accordion
     three/        NotebookScene, DiamondModel, SceneController, SceneLights,
                   WebGLErrorBoundary
   content/        Bilingual copy (pt.js, en.js), diamondStates.js, references.js
   hooks/          Scroll progress, language, reduced complexity, scene state
   styles/         Global styles, Tailwind extensions
 roadmap/          IMPLEMENTATION-ROADMAP.md (task-level execution guide)
+examples/         Filled example outputs generated with the guia workflow
 templates/       Reusable templates for agentic development
   README.md      Index and usage order
   PLAN-TEMPLATE.md, ROADMAP-TEMPLATE.md, RULES-TEMPLATE.md,
   PRD-TEMPLATE.md, SKILLS-TEMPLATE.md
 docs/             Internal PRDs, copy outlines
-public/           Static assets (favicon, OG image, llms.txt)
+public/           Static assets and agent entrypoints (favicon, OG image, llms.txt, start-here.md, agent-index.json)
 .github/
   workflows/      deploy.yml (GitHub Pages)
 ```
@@ -105,6 +109,7 @@ Content is available in PT-BR and EN, switchable via a toggle that preserves scr
 | [`PLAN.md`](PLAN.md)                                             | Full product spec — vision, stack, architecture, phases, risks, acceptance criteria |
 | [`IMPLEMENTATION-ROADMAP.md`](roadmap/IMPLEMENTATION-ROADMAP.md) | Task-level execution guide — 57 atomic tasks across 7 phases                        |
 | [`AGENTS.md`](AGENTS.md)                                         | Instructions for AI coding agents working on this project                           |
+| [`examples/README.md`](examples/README.md)                       | Filled examples that show the expected output shape                                 |
 
 ## Contributing
 

@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Um guia prático para desenvolvimento com agentes de código. Aprenda a usar Cursor, Claude Code, Codex e outras ferramentas para construir software com IA."
+      content="guia: read it as a guide or use it with your code agent. Bilingual site, llms.txt bootstrap, templates, and public examples."
     />
-    <meta property="og:title" content="guia prático para programar com agentes" />
+    <meta property="og:title" content="guia | practical guide to coding with agents" />
     <meta
       property="og:description"
-      content="Um guia prático para programar com agentes. Aprenda a usar Cursor, Claude Code, Codex e outras ferramentas com IA."
+      content="Read it as a guide or use it with your code agent. Bilingual site, llms.txt bootstrap, templates, and public examples."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://baltazarparra.github.io/guia/" />
     <meta property="og:image" content="https://baltazarparra.github.io/guia/og-image.png?v=3" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="guia prático para programar com agentes" />
+    <meta name="twitter:title" content="guia | practical guide to coding with agents" />
     <meta
       name="twitter:description"
-      content="Um guia prático para programar com agentes. Aprenda a usar Cursor, Claude Code, Codex e outras ferramentas com IA."
+      content="Read it as a guide or use it with your code agent. Bilingual site, llms.txt bootstrap, templates, and public examples."
     />
     <meta name="twitter:image" content="https://baltazarparra.github.io/guia/og-image.png?v=3" />
     <link rel="canonical" href="https://baltazarparra.github.io/guia/" />
     <link rel="help" type="text/plain" href="/guia/llms.txt" />
+    <link rel="alternate" type="text/markdown" title="guia start here" href="/guia/start-here.md" />
+    <link
+      rel="alternate"
+      type="application/json"
+      title="guia agent index"
+      href="/guia/agent-index.json"
+    />
     <link rel="icon" type="image/svg+xml" href="/guia/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +38,32 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Um guia prático para desenvolvimento com agentes de código</title>
+    <title>guia | practical guide to coding with agents</title>
   </head>
   <body style="background-color: #0e0d0b">
+    <noscript>
+      <main
+        style="
+          max-width: 720px;
+          margin: 0 auto;
+          padding: 32px 24px;
+          color: #ede8dc;
+          font-family: Inter, system-ui, sans-serif;
+        "
+      >
+        <h1 style="color: #c49664">guia</h1>
+        <p>
+          PT-BR: Se voce recebeu so a URL da home e nao renderiza JavaScript, comece por
+          <a href="/guia/start-here.md" style="color: #c49664">start-here.md</a> ou
+          <a href="/guia/llms.txt" style="color: #c49664">llms.txt</a>.
+        </p>
+        <p>
+          EN: If you only received the home URL and do not render JavaScript, start with
+          <a href="/guia/start-here.md" style="color: #c49664">start-here.md</a> or
+          <a href="/guia/llms.txt" style="color: #c49664">llms.txt</a>.
+        </p>
+      </main>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

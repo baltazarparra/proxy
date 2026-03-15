@@ -2,7 +2,7 @@
 
 ## Project overview
 
-gu**ia** is a static single-page landing page that explains agentic development to beginners. It is a long-form, scroll-driven editorial experience with a 3D diamond as the central visual element. Bilingual: PT-BR and EN. Deployed to GitHub Pages.
+gu**ia** is a static single-page landing page that explains agentic development to beginners. It is also a public package of agent-friendly entrypoints such as `llms.txt`, `start-here.md`, and public templates. The experience is bilingual (PT-BR and EN), scroll-driven, and built around a 3D diamond. Deployed to GitHub Pages.
 
 Full product spec: `PLAN.md`
 Task-level execution guide: `IMPLEMENTATION-ROADMAP.md`
@@ -35,24 +35,28 @@ npm run test:watch # testes em modo watch
 ```
 src/
   components/
-    layout/       # PageShell, SectionContainer, LanguageToggle, BackgroundLayer
-    sections/     # HeroSection, AgentsSection, ModelsSection, ToolsSection,
-                  # PlanSection, RoadmapSection, ExecutionSection,
-                  # BootstrapSection, TemplatesSection, ClosingSection
-    ui/           # Button, Pill, SectionHeading, CopyBlock
+    layout/       # PageShell, SectionContainer, LanguageToggle, Footer
+    sections/     # HeroSection, GlossarySection, AgentsSection, ModesSection,
+                  # ModelsSection, PlanSection, RoadmapSection, ExecutionSection,
+                  # BootstrapSection, TemplatesSection, ClosingSection, DipCtaSection
+    ui/           # Button, SectionHeading, CopyBlock, Modal, Accordion, BrandText
     three/        # NotebookScene, DiamondModel, SceneLights, SceneController,
                   # WebGLErrorBoundary
   content/        # pt.js, en.js (bilingual copy), diamondStates.js
-  hooks/          # useLanguage, useScrollProgress, useSectionProgress,
-                  # useReducedComplexity, useSceneState, useScrollStore,
+  hooks/          # useLanguage, useScrollProgress, useReducedComplexity,
+                  # useSceneState, useScrollStore,
                   # useSectionReveal
   styles/         # globals.css (Tailwind directives, CSS custom properties)
   App.jsx
   main.jsx
 public/
-  llms.txt        # Machine-readable bootstrap instructions for code agents
+  llms.txt        # Bootstrap instructions for code agents
+  start-here.md   # Static entrypoint for agents or humans that only got the site URL
+  agent-index.json # Machine-readable map of public artifacts
   models/         # (reserved — using procedural geometry for diamond)
   textures/       # texture assets if any
+examples/
+  ...             # Filled examples of PLAN.md, roadmap, and AGENTS.md outputs
 .github/
   workflows/      # deploy.yml (GitHub Pages deployment)
 ```
@@ -114,16 +118,20 @@ Copy is hardcoded in `src/content/pt.js` and `src/content/en.js`. Both files exp
 
 ```js
 export default {
+  meta: { title, description, socialTitle, socialDescription },
   hero: { title, subtitle, body },
   agents: { title, body, categories: [] },
+  modes: { title, body, items: [] },
   models: { title, body, lastUpdated, note, filters: [], items: [] },
-  tools: { title, body, lastUpdated, ide: [], cli: [], note },
   plan: { title, body, steps: [] },
   roadmap: { title, body, steps: [] },
   execution: { title, body, steps: [] },
-  bootstrap: { title, body, instruction, urlLabel, copiedLabel },
+  bootstrap: { title, body, instruction, assets: [] },
   templates: { title, body, items: [] },
+  glossary: { title, body, terms: [] },
+  dip: { headline, cta },
   closing: { title, body, cta },
+  footer: { bibliographyTitle },
 }
 ```
 
@@ -179,7 +187,7 @@ GitHub Pages via GitHub Actions. Workflow at `.github/workflows/deploy.yml`.
 - Triggers on push to `main`
 - Builds static bundle and publishes to Pages
 - Vite `base` config must match the repo path (e.g. `/guia/`)
-- SEO: `<title>`, `<meta description>`, Open Graph tags, favicon, `<html lang>` attribute
+- SEO and discovery: `<title>`, `<meta description>`, Open Graph tags, favicon, `<html lang>` attribute, and direct links to `llms.txt`, `start-here.md`, and `agent-index.json`
 
 ## Validation after changes
 

@@ -8,7 +8,6 @@ import ModelsSection from './components/sections/ModelsSection'
 import PlanSection from './components/sections/PlanSection'
 import RoadmapSection from './components/sections/RoadmapSection'
 import ExecutionSection from './components/sections/ExecutionSection'
-import BootstrapSection from './components/sections/BootstrapSection'
 import TemplatesSection from './components/sections/TemplatesSection'
 import GlossarySection from './components/sections/GlossarySection'
 import DipCtaSection from './components/sections/DipCtaSection'
@@ -27,7 +26,6 @@ export default function App() {
         <PlanSection />
         <RoadmapSection />
         <ExecutionSection />
-        <BootstrapSection />
         <TemplatesSection />
         <DipCtaSection />
         <Footer />

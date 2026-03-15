@@ -26,6 +26,18 @@ export function LanguageProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
+    document.title = copies[lang].meta.title
+
+    const setMeta = (selector, content) => {
+      const element = document.querySelector(selector)
+      if (element) element.setAttribute('content', content)
+    }
+
+    setMeta('meta[name="description"]', copies[lang].meta.description)
+    setMeta('meta[property="og:title"]', copies[lang].meta.socialTitle)
+    setMeta('meta[property="og:description"]', copies[lang].meta.socialDescription)
+    setMeta('meta[name="twitter:title"]', copies[lang].meta.socialTitle)
+    setMeta('meta[name="twitter:description"]', copies[lang].meta.socialDescription)
   }, [lang])
 
   const value = useMemo(

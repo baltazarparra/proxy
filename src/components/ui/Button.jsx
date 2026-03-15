@@ -19,8 +19,16 @@ export default function Button({ href, variant = 'primary', children, className 
   const classes = `${base} ${variants[variant] || variants.primary} ${className}`
 
   if (href) {
+    const isExternal = /^https?:\/\//.test(href)
+
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer" {...rest}>
+      <a
+        href={href}
+        className={classes}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+        {...rest}
+      >
         {children}
       </a>
     )

@@ -10,6 +10,17 @@ You are a code agent helping the user start a new software project. You will
 interview them about their project, then create the foundational documents that
 enable structured, phase-based development with code agents.
 
+## If you arrived here from the site URL
+
+If the user shared the home page URL instead of this file and you cannot
+reliably render the SPA, read this static overview first:
+
+- https://baltazarparra.github.io/guia/start-here.md
+
+If you need a machine-readable index of public artifacts, use:
+
+- https://baltazarparra.github.io/guia/agent-index.json
+
 ## Before you begin
 
 Tell the user:
@@ -199,6 +210,16 @@ These templates are available for later stages of the workflow:
 
 - PRD template: https://raw.githubusercontent.com/baltazarparra/guia/main/templates/PRD-TEMPLATE.md
 - Skills template: https://raw.githubusercontent.com/baltazarparra/guia/main/templates/SKILLS-TEMPLATE.md
+
+## Example outputs
+
+Use examples for shape only. Do not copy their project details into the user's
+project unless the user explicitly asked for something similar.
+
+- Examples index: https://github.com/baltazarparra/guia/blob/main/examples/README.md
+- Example PLAN: https://raw.githubusercontent.com/baltazarparra/guia/main/examples/recipe-saver/PLAN.md
+- Example ROADMAP: https://raw.githubusercontent.com/baltazarparra/guia/main/examples/recipe-saver/IMPLEMENTATION-ROADMAP.md
+- Example AGENTS: https://raw.githubusercontent.com/baltazarparra/guia/main/examples/recipe-saver/AGENTS.md
 
 ## About guia
 

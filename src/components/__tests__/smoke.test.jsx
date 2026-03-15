@@ -25,15 +25,15 @@ describe('smoke tests', () => {
     const { container } = render(<App />)
     const expectedIds = [
       'hero',
+      'glossary',
       'agents',
       'modes',
       'models',
       'plan',
       'roadmap',
       'execution',
-      'bootstrap',
       'templates',
-      'glossary',
+      'dip',
     ]
 
     for (const id of expectedIds) {

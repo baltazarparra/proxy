@@ -1,0 +1,42 @@
+{
+  "name": "guia",
+  "updated": "2026-03-15",
+  "site_url": "https://baltazarparra.github.io/guia/",
+  "repository_url": "https://github.com/baltazarparra/guia",
+  "languages": ["pt-BR", "en"],
+  "entrypoints": {
+    "home": {
+      "url": "https://baltazarparra.github.io/guia/",
+      "best_for": ["human_overview", "section_browsing", "agents_with_browser_rendering"]
+    },
+    "llms": {
+      "url": "https://baltazarparra.github.io/guia/llms.txt",
+      "best_for": ["project_bootstrap", "guided_interview", "base_file_generation"]
+    },
+    "start_here": {
+      "url": "https://baltazarparra.github.io/guia/start-here.md",
+      "best_for": ["agents_without_js_rendering", "quick_static_overview", "link_discovery"]
+    }
+  },
+  "templates": {
+    "index": "https://github.com/baltazarparra/guia/blob/main/templates/README.md",
+    "plan_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/templates/PLAN-TEMPLATE.md",
+    "roadmap_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/templates/ROADMAP-TEMPLATE.md",
+    "rules_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/templates/RULES-TEMPLATE.md",
+    "prd_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/templates/PRD-TEMPLATE.md",
+    "skills_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/templates/SKILLS-TEMPLATE.md"
+  },
+  "examples": {
+    "index": "https://github.com/baltazarparra/guia/blob/main/examples/README.md",
+    "recipe_saver": {
+      "directory": "https://github.com/baltazarparra/guia/tree/main/examples/recipe-saver",
+      "plan_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/examples/recipe-saver/PLAN.md",
+      "roadmap_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/examples/recipe-saver/IMPLEMENTATION-ROADMAP.md",
+      "agents_raw": "https://raw.githubusercontent.com/baltazarparra/guia/main/examples/recipe-saver/AGENTS.md"
+    }
+  },
+  "contributor_docs": {
+    "agents_md": "https://github.com/baltazarparra/guia/blob/main/AGENTS.md",
+    "readme": "https://github.com/baltazarparra/guia/blob/main/README.md"
+  }
+}

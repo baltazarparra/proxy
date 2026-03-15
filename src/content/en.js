@@ -1,4 +1,13 @@
 export default {
+  meta: {
+    title: 'guia | practical guide to coding with agents',
+    description:
+      'Read it as a guide or use it with your agent. Tools, models, templates, and a clear flow for PLAN, roadmap, and execution.',
+    socialTitle: 'guia | practical guide to coding with agents',
+    socialDescription:
+      'Bilingual guide for agentic development. Use it as reference or bootstrap a new project with llms.txt.',
+  },
+
   modal: {
     closeLabel: 'Close',
     toolsLabel: 'Tools:',
@@ -11,9 +20,15 @@ export default {
   hero: {
     title: 'guia — practical guide',
     subtitle: 'to coding with agents.',
+    body: 'You can use guia in two ways: read it as reference, or hand the method to your agent and let it guide the build.',
+    primaryCtaLabel: 'Browse the guide',
+    secondaryCtaLabel: 'Use with agent',
+    repoLabel: 'Open repository',
+    linksLabel: 'Direct links:',
     tabLabel: 'prompt to get started',
     prompt:
       'Read the contents of https://baltazarparra.github.io/guia/llms.txt and follow the instructions to guide me through creating a new software project.',
+    copyLabel: 'Copy',
     copiedLabel: 'Copied!',
   },
 
@@ -342,12 +357,35 @@ export default {
   },
 
   bootstrap: {
-    title: 'Let the agent start for you',
-    body: "You learned the workflow. Now the good part: you don't have to do it manually. Paste the URL into your agent and it'll guide you, ask the right questions, and create your project files.",
+    title: 'Pick the right entrypoint',
+    body: 'You can paste the home URL into the agent, but there are also safer shortcuts when you want it to follow the method without depending on the interface.',
     instruction:
-      'Copy the URL and paste it into your agent chat (Cursor, Claude Code, whatever). It reads the file and walks you through step by step.',
+      'Home for general context. llms.txt for guided bootstrap. start-here.md for agents that do not render the SPA reliably.',
     urlLabel: 'Copy URL',
+    openLabel: 'Open',
     copiedLabel: 'Copied!',
+    agentIndexLabel: 'Index for tools',
+    agentIndexUrl: 'https://baltazarparra.github.io/guia/agent-index.json',
+    assets: [
+      {
+        name: 'Home',
+        description:
+          'Best for humans who want the big picture and for agents that can navigate the full page.',
+        url: 'https://baltazarparra.github.io/guia/',
+      },
+      {
+        name: 'llms.txt',
+        description:
+          'Best for starting a new project. The agent interviews the user, suggests structure, and creates the base files.',
+        url: 'https://baltazarparra.github.io/guia/llms.txt',
+      },
+      {
+        name: 'start-here.md',
+        description:
+          'Static summary with essential links. Best when the agent does not render JavaScript or needs a quick index.',
+        url: 'https://baltazarparra.github.io/guia/start-here.md',
+      },
+    ],
   },
 
   templates: {

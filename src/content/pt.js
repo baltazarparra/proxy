@@ -1,4 +1,13 @@
 export default {
+  meta: {
+    title: 'guia | guia prático para programar com agentes',
+    description:
+      'Leia como guia ou use com seu agente. Ferramentas, modelos, templates e um fluxo claro de PLAN, roadmap e execução.',
+    socialTitle: 'guia | guia prático para programar com agentes',
+    socialDescription:
+      'Guia bilíngue para desenvolvimento com agentes de código. Consulte referências ou bootstrap um projeto com llms.txt.',
+  },
+
   modal: {
     closeLabel: 'Fechar',
     toolsLabel: 'Ferramentas:',
@@ -11,9 +20,15 @@ export default {
   hero: {
     title: 'Guia prático',
     subtitle: 'para programar com agentes.',
+    body: 'Você pode usar o guia de dois jeitos: consultar como referência ou passar o método pro seu agente e deixar ele te conduzir.',
+    primaryCtaLabel: 'Consultar o guia',
+    secondaryCtaLabel: 'Usar com agente',
+    repoLabel: 'Ver repositório',
+    linksLabel: 'Atalhos:',
     tabLabel: 'prompt para começar',
     prompt:
       'Leia o conteúdo de https://baltazarparra.github.io/guia/llms.txt e siga as instruções para me guiar na criação de um novo projeto de software.',
+    copyLabel: 'Copiar',
     copiedLabel: 'Copiado!',
   },
 
@@ -348,12 +363,35 @@ export default {
   },
 
   bootstrap: {
-    title: 'Deixe o agente começar por você',
-    body: 'Aprendeu o fluxo. Agora a parte boa: não precisa fazer na mão. Cola a URL no agente e ele te guia, faz as perguntas certas e cria os arquivos do projeto.',
+    title: 'Escolha a porta de entrada certa',
+    body: 'Dá pra colar a home no agente, mas também existem atalhos mais seguros quando você quer que ele siga o método sem depender da interface.',
     instruction:
-      'Copia a URL e cola no chat do agente (Cursor, Claude Code, qualquer um). Ele lê o arquivo e te leva passo a passo.',
+      'Home pra contexto geral. llms.txt pra bootstrap guiado. start-here.md pra agentes que não renderizam a SPA direito.',
     urlLabel: 'Copiar URL',
+    openLabel: 'Abrir',
     copiedLabel: 'Copiado!',
+    agentIndexLabel: 'Índice para ferramentas',
+    agentIndexUrl: 'https://baltazarparra.github.io/guia/agent-index.json',
+    assets: [
+      {
+        name: 'Home',
+        description:
+          'Melhor pra quem quer entender o projeto rápido e pra agentes que conseguem navegar a página completa.',
+        url: 'https://baltazarparra.github.io/guia/',
+      },
+      {
+        name: 'llms.txt',
+        description:
+          'Melhor pra começar um projeto novo. O agente entrevista, propõe estrutura e cria os arquivos base.',
+        url: 'https://baltazarparra.github.io/guia/llms.txt',
+      },
+      {
+        name: 'start-here.md',
+        description:
+          'Resumo estático com links essenciais. Melhor quando o agente não renderiza JavaScript ou precisa de um índice rápido.',
+        url: 'https://baltazarparra.github.io/guia/start-here.md',
+      },
+    ],
   },
 
   templates: {

@@ -44,7 +44,7 @@ export default function HeroSection() {
             </p>
             <button
               onClick={handleCopy}
-              aria-label={copied ? t.hero.copiedLabel : 'Copy'}
+              aria-label={copied ? t.hero.copiedLabel : t.hero.copyLabel}
               className="text-foreground/40 hover:bg-foreground/10 hover:text-foreground/70 flex-shrink-0 rounded-md p-2 transition-colors"
             >
               {copied ? (

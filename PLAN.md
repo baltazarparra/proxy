@@ -1,5 +1,7 @@
 # PLAN.md — gu**ia** Landing Page
 
+> Current implementation note: the original visual metaphor in this plan was a 3D notebook. The live project later migrated to a 3D diamond. For the current visual direction, follow `AGENTS.md` and `docs/PRD-diamond-replacement.md`.
+
 ## 1. Project Overview
 
 **Project name:** gu**ia**  

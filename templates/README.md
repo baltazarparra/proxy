@@ -2,6 +2,8 @@
 
 Reusable templates for structured agentic development. Use them in this order when bootstrapping a new project.
 
+If you only have the public site URL and need a static starting point, use [start-here.md](https://baltazarparra.github.io/guia/start-here.md) first.
+
 ## Template index
 
 | Template         | When to use                                           | Output file                   |
@@ -28,5 +30,9 @@ Use these URLs to retrieve the raw Markdown. Replace `main` with your branch if 
 2. Agent interviews user (10 questions), then creates PLAN.md, IMPLEMENTATION-ROADMAP.md, AGENTS.md
 3. User reviews and approves
 4. For each phase: agent writes PRD, implements, updates roadmap
+
+## Examples
+
+Filled examples live in [`examples/README.md`](../examples/README.md). Use them to understand the expected output shape, not as fixed project content.
 
 Learn more: https://baltazarparra.github.io/guia/
