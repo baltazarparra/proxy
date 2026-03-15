@@ -26,6 +26,13 @@ Guia presents a simple, practical workflow that helps beginners build with more 
 | State bridge | Zustand                       |
 | Deployment   | GitHub Actions + GitHub Pages |
 
+## For code agents
+
+| Use case                    | What to read                                                                                                                                                                         |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Bootstrap a new project** | [llms.txt](https://baltazarparra.github.io/guia/llms.txt) — paste this URL into your agent. It will interview the user and create PLAN.md, IMPLEMENTATION-ROADMAP.md, and AGENTS.md. |
+| **Contribute to Guia**      | [AGENTS.md](AGENTS.md) — project rules, constraints, and validation workflow.                                                                                                        |
+
 ## Local development
 
 Prerequisites: Node.js 18+
@@ -56,16 +63,24 @@ npm run format   # auto-format all files
 src/
   components/
     layout/       PageShell, SectionContainer, LanguageToggle
-    sections/     HeroSection, AgentsSection, ToolsSection, PlanSection,
-                  RoadmapSection, ExecutionSection, TemplatesSection, ClosingSection
-    ui/           Button, SectionHeading, CopyBlock
+    sections/     HeroSection, AgentsSection, ModelsSection, ToolsSection,
+                  PlanSection, RoadmapSection, ExecutionSection,
+                  BootstrapSection, TemplatesSection, GlossarySection, ClosingSection
+    ui/           Button, Pill, SectionHeading, CopyBlock, Modal
     three/        NotebookScene, DiamondModel, SceneController, SceneLights,
                   WebGLErrorBoundary
-  content/        Bilingual copy (pt.js, en.js), diamondStates.js
+  content/        Bilingual copy (pt.js, en.js), diamondStates.js, references.js
   hooks/          Scroll progress, language, reduced complexity, scene state
   styles/         Global styles, Tailwind extensions
-templates/        Reusable project documentation templates (PLAN, ROADMAP, PRD, etc.)
-public/           Static assets (favicon, OG image)
+roadmap/          IMPLEMENTATION-ROADMAP.md (task-level execution guide)
+templates/       Reusable templates for agentic development
+  README.md      Index and usage order
+  PLAN-TEMPLATE.md, ROADMAP-TEMPLATE.md, RULES-TEMPLATE.md,
+  PRD-TEMPLATE.md, SKILLS-TEMPLATE.md
+docs/             Internal PRDs, copy outlines
+public/           Static assets (favicon, OG image, llms.txt)
+.github/
+  workflows/      deploy.yml (GitHub Pages)
 ```
 
 ## Architecture
@@ -85,15 +100,15 @@ Content is available in PT-BR and EN, switchable via a toggle that preserves scr
 
 ## Documentation
 
-| Document                                                 | Purpose                                                                             |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [`PLAN.md`](PLAN.md)                                     | Full product spec — vision, stack, architecture, phases, risks, acceptance criteria |
-| [`IMPLEMENTATION-ROADMAP.md`](IMPLEMENTATION-ROADMAP.md) | Task-level execution guide — 57 atomic tasks across 7 phases                        |
-| [`AGENTS.md`](AGENTS.md)                                 | Instructions for AI coding agents working on this project                           |
+| Document                                                         | Purpose                                                                             |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [`PLAN.md`](PLAN.md)                                             | Full product spec — vision, stack, architecture, phases, risks, acceptance criteria |
+| [`IMPLEMENTATION-ROADMAP.md`](roadmap/IMPLEMENTATION-ROADMAP.md) | Task-level execution guide — 57 atomic tasks across 7 phases                        |
+| [`AGENTS.md`](AGENTS.md)                                         | Instructions for AI coding agents working on this project                           |
 
 ## Contributing
 
-If you'd like to contribute, start by reading [`PLAN.md`](PLAN.md) for context and [`IMPLEMENTATION-ROADMAP.md`](IMPLEMENTATION-ROADMAP.md) for the current execution plan.
+If you'd like to contribute, start by reading [`PLAN.md`](PLAN.md) for context and [`IMPLEMENTATION-ROADMAP.md`](roadmap/IMPLEMENTATION-ROADMAP.md) for the current execution plan.
 
 ## License
 
