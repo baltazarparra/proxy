@@ -21,7 +21,7 @@ describe('smoke tests', () => {
     expect(h1).toHaveTextContent('Guia prático')
   })
 
-  it('renders all 10 section IDs', () => {
+  it('renders all 9 section IDs', () => {
     const { container } = render(<App />)
     const expectedIds = [
       'hero',
@@ -33,7 +33,6 @@ describe('smoke tests', () => {
       'roadmap',
       'execution',
       'templates',
-      'dip',
     ]
 
     for (const id of expectedIds) {

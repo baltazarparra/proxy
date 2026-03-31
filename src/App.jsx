@@ -10,7 +10,6 @@ import RoadmapSection from './components/sections/RoadmapSection'
 import ExecutionSection from './components/sections/ExecutionSection'
 import TemplatesSection from './components/sections/TemplatesSection'
 import GlossarySection from './components/sections/GlossarySection'
-import DipCtaSection from './components/sections/DipCtaSection'
 import Footer from './components/layout/Footer'
 
 export default function App() {
@@ -27,7 +26,6 @@ export default function App() {
         <RoadmapSection />
         <ExecutionSection />
         <TemplatesSection />
-        <DipCtaSection />
         <Footer />
       </PageShell>
     </LanguageProvider>

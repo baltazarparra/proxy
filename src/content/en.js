@@ -536,11 +536,6 @@ export default {
     ],
   },
 
-  dip: {
-    headline: 'Need a more complete workflow for developing larger tasks?',
-    cta: 'Learn about Milestone',
-  },
-
   closing: {
     title: 'Structure is speed.',
     body: "Good agent development doesn't start with a prompt. It starts with a plan. Right tool, clear plan, organized roadmap. Each step makes it clearer what the agent should do. Simple flow works better than chaotic prompts.",
