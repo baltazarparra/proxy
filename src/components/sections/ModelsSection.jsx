@@ -179,6 +179,20 @@ export default function ModelsSection() {
                 ))}
               </div>
             </div>
+
+            {openModel.sourceUrl && (
+              <p className="text-muted text-xs">
+                {t.modal?.sourceLabel}{' '}
+                <a
+                  href={openModel.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-accent underline-offset-4 hover:underline"
+                >
+                  {openModel.sourceName ?? openModel.sourceUrl}
+                </a>
+              </p>
+            )}
           </div>
         )}
       </Modal>

@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { beforeEach, describe, it, expect, vi } from 'vitest'
+import { fireEvent, render, screen } from '@testing-library/react'
 import App from '../../App'
 
 vi.mock('../three/NotebookScene', () => ({
@@ -15,6 +15,11 @@ vi.mock('../../hooks/useSectionReveal', () => ({
 }))
 
 describe('smoke tests', () => {
+  beforeEach(() => {
+    localStorage.clear()
+    document.documentElement.lang = 'pt-BR'
+  })
+
   it('App renders without crashing', () => {
     render(<App />)
     const h1 = screen.getByRole('heading', { level: 1 })
@@ -44,5 +49,14 @@ describe('smoke tests', () => {
     render(<App />)
     expect(screen.getByText('PT')).toBeInTheDocument()
     expect(screen.getByText('EN')).toBeInTheDocument()
+  })
+
+  it('language toggle switches copy and html lang', () => {
+    render(<App />)
+
+    fireEvent.click(screen.getByText('EN'))
+
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('practical guide')
+    expect(document.documentElement.lang).toBe('en')
   })
 })
